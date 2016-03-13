@@ -52,27 +52,19 @@ h2 {
     @include border-radius(3px);
   }
 }
-.list-inputs {
-  width: 530px;
-  margin-top: -15px;
-  > li {
-    margin-bottom: 40px;
-    &:first-child {
-      margin-bottom: 45px;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
 .address {
-  > li {
+  margin: -15px 0 45px 0;
+  li {
     margin-top: 5px;
     &:first-child {
       margin-top: 0;
       margin-left: 178px;
-
     }
+  }
+}
+.status {
+  li:first-child {
+    margin-bottom: 40px;
   }
 }
 label[for="region"] {
@@ -108,7 +100,7 @@ input#region {
   }
 }
 input#streetName {
-  width: 250px;
+  width: 350px;
   padding: 0 5px;
   text-align: left;
   &::-webkit-input-placeholder {
