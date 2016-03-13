@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html data-ng-app>
-<head lang="en">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Neru Angular</title>
-    <link rel="stylesheet" href="styles/css/styles.css" />
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{'Neru Angular'}}</title>
+    <link rel="stylesheet" href="styles/css/styles.css"/>
 </head>
 <body>
-
+<section class="container-inputs">
+    <h2>Инпуты</h2>
+    <ul class="list-inputs">
+        <li>
+            <ul class="address">
+                <li>
+                    <label for="region">Область</label>
+                    <input type="text" id="region" placeholder="10px" />
+                </li>
+                <li>
+                    <label for="streetName">Нормальное состояние</label>
+                    <input type="text" id="streetName" placeholder="Начните печатать название улицы" />
+                </li>
+            </ul>
+        </li>
+        <li>
+            <label for="focusInput">Инпут в фокусе</label>
+            <input type="text" id="focusInput" />
+        </li>
+        <li>
+            <label for="errorInput">Ошибка валидации</label>
+            <input type="text" id="errorInput" />
+            <span class="error-message">Вы не заполнили это поле</span>
+        </li>
+    </ul>
+</section>
 <script src="lib/angular.min.js"></script>
 <script src="js/app.js"></script>
 </body>
