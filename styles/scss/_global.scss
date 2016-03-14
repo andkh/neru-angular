@@ -36,7 +36,7 @@ body {
   font: 14px 'Arial', sans-serif;
   padding: 40px;
   > section {
-    margin-top: 40px;
+    margin-top: 80px;
     &:first-child {
       margin: 0;
     }
@@ -470,4 +470,22 @@ input#errorInput {
       border-bottom-color: #3f5467;
     }
   }
+}
+/* Comment */
+.comment, .important {
+  font: 15px 'Pt Sans', sans-serif;
+  line-height: 20px;
+}
+.comment {
+  width: 855px;
+  color: #999999;
+}
+.important {
+  width: 955px;
+  padding: 15px 45px;
+  border: 1px dashed #ffa200;
+  background: #fafafa;
+  text-align: center;
+  color: #333333;
+  @include border-radius(3px);
 }

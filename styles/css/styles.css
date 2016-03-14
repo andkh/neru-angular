@@ -99,7 +99,7 @@ body {
 }
 /* line 38, ../scss/_global.scss */
 body > section {
-  margin-top: 40px;
+  margin-top: 80px;
 }
 /* line 40, ../scss/_global.scss */
 body > section:first-child {
@@ -638,4 +638,30 @@ input#errorInput {
 .sidebar a:hover, .sidebar a:focus {
   background: #3f5467;
   border-bottom-color: #3f5467;
+}
+
+/* Comment */
+/* line 475, ../scss/_global.scss */
+.comment, .important {
+  font: 15px 'Pt Sans', sans-serif;
+  line-height: 20px;
+}
+
+/* line 479, ../scss/_global.scss */
+.comment {
+  width: 855px;
+  color: #999999;
+}
+
+/* line 483, ../scss/_global.scss */
+.important {
+  width: 955px;
+  padding: 15px 45px;
+  border: 1px dashed #ffa200;
+  background: #fafafa;
+  text-align: center;
+  color: #333333;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
