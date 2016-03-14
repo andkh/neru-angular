@@ -154,21 +154,21 @@
 </section>
 <section class="container-sidebar">
     <h2>Боковое меню</h2>
-    <ul class="sidebar">
-        <li class="active">
-            <a href="#">Мой профиль</a>
+    <ul class="sidebar" ng-controller="navCtrl">
+        <li ng-class="menuClass('profile')">
+            <a href="#!profile" class="active">Мой профиль</a>
         </li>
-        <li>
-            <a href="#">Изменение пароля</a>
+        <li ng-class="navClass('password')">
+            <a href="#!password">Изменение пароля</a>
         </li>
-        <li>
-            <a href="#">Мои объявления</a>
+        <li ng-class="menuClass('my-ad')">
+            <a href="#!ad">Мои объявления</a>
         </li>
-        <li>
-            <a href="#">Группы объявлений</a>
+        <li ng-class="menuClass('groups-ad')">
+            <a href="#!groups-ad">Группы объявлений</a>
         </li>
-        <li>
-            <a href="#">Мои агенты</a>
+        <li ng-class="menuClass('agent')">
+            <a href="#!agent">Мои агенты</a>
         </li>
     </ul>
 </section>

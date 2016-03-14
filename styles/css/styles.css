@@ -621,12 +621,12 @@ input#errorInput {
 .sidebar li:last-child a {
   border-bottom: none;
 }
-/* line 457, ../scss/_global.scss */
-.sidebar .active a {
+/* line 456, ../scss/_global.scss */
+.sidebar .active {
   background: #3f5467;
   border-bottom-color: #3f5467;
 }
-/* line 462, ../scss/_global.scss */
+/* line 460, ../scss/_global.scss */
 .sidebar a {
   display: block;
   padding: 15px 20px;
@@ -634,26 +634,26 @@ input#errorInput {
   border-bottom: 1px solid #6d8495;
   color: #fff;
 }
-/* line 468, ../scss/_global.scss */
+/* line 466, ../scss/_global.scss */
 .sidebar a:hover, .sidebar a:focus {
   background: #3f5467;
   border-bottom-color: #3f5467;
 }
 
 /* Comment */
-/* line 475, ../scss/_global.scss */
+/* line 473, ../scss/_global.scss */
 .comment, .important {
   font: 15px 'Pt Sans', sans-serif;
   line-height: 20px;
 }
 
-/* line 479, ../scss/_global.scss */
+/* line 477, ../scss/_global.scss */
 .comment {
   width: 855px;
   color: #999999;
 }
 
-/* line 483, ../scss/_global.scss */
+/* line 481, ../scss/_global.scss */
 .important {
   width: 955px;
   padding: 15px 45px;

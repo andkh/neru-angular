@@ -1,5 +1,4 @@
-app
-    .directive('counter', function() {
+app.directive('counter', function() {
     return {
         restrict: 'A',
         scope: { value: '=value' },
@@ -62,8 +61,7 @@ app
  * https://github.com/vitalets/checklist-model
  * License: MIT http://opensource.org/licenses/MIT
  */
-app
-    .directive('checklistModel', ['$parse', '$compile', function($parse, $compile) {
+app.directive('checklistModel', ['$parse', '$compile', function($parse, $compile) {
         // contains
         function contains(arr, item, comparator) {
             if (angular.isArray(arr)) {

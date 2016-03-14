@@ -17,3 +17,10 @@ app.controller('CheckboxCtrl', function($scope) {
         return obj1.id === obj2.id;
     };
 });
+
+app.controller("navCtrl", function($scope, $location) {
+    $scope.menuClass = function(page) {
+        var current = $location.path().substring(1);
+        return page === current ? "active" : "";
+    };
+});
