@@ -3,7 +3,7 @@ app.controller('CounterCtrl', function( $scope ) {
 
 });
 
-app.controller('checkboxCtrl', function($scope) {
+app.controller('CheckboxCtrl', function($scope) {
     $scope.roles = [
         {id: 1, text: 'Школы, лицеи, гимназии'},
         {id: 2, text: 'Школы, лицеи, гимназии'}

@@ -529,7 +529,7 @@ input#errorInput {
 
 /* Side menu */
 /* line 379, ../scss/_global.scss */
-.side-menu fieldset {
+.container-side-menu fieldset {
   width: 360px;
   padding: 20px;
   border: 1px solid #dfdfdf;
@@ -538,29 +538,29 @@ input#errorInput {
   border-radius: 3px;
 }
 /* line 385, ../scss/_global.scss */
-.side-menu legend {
+.container-side-menu legend {
   padding: 0 10px;
   font: 16px 'Roboto-Regular', sans-serif;
   color: #3f5467;
 }
 /* line 391, ../scss/_global.scss */
-.side-menu .active a {
+.container-side-menu .active a {
   text-decoration: underline;
 }
 /* line 395, ../scss/_global.scss */
-.side-menu li {
+.container-side-menu li {
   margin-top: 15px;
 }
 /* line 397, ../scss/_global.scss */
-.side-menu li:first-child {
+.container-side-menu li:first-child {
   margin: 0;
 }
 /* line 400, ../scss/_global.scss */
-.side-menu li a {
+.container-side-menu li a {
   color: #0088cc;
 }
 /* line 402, ../scss/_global.scss */
-.side-menu li a:hover {
+.container-side-menu li a:hover {
   text-decoration: underline;
 }
 
@@ -610,4 +610,32 @@ input#errorInput {
 .list-status .discontinued-publications {
   border-color: #0033ff;
   color: #0033ff;
+}
+
+/* Sidebar */
+/* line 449, ../scss/_global.scss */
+.sidebar {
+  width: 250px;
+}
+/* line 452, ../scss/_global.scss */
+.sidebar li:last-child a {
+  border-bottom: none;
+}
+/* line 457, ../scss/_global.scss */
+.sidebar .active a {
+  background: #3f5467;
+  border-bottom-color: #3f5467;
+}
+/* line 462, ../scss/_global.scss */
+.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  background: #5d7486;
+  border-bottom: 1px solid #6d8495;
+  color: #fff;
+}
+/* line 468, ../scss/_global.scss */
+.sidebar a:hover, .sidebar a:focus {
+  background: #3f5467;
+  border-bottom-color: #3f5467;
 }

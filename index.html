@@ -37,10 +37,10 @@
         </ul>
     </div>
 </section>
-<section class="checkbox">
+<section class="container-checkbox">
     <h2>Чекбоксы</h2>
     <form action="#">
-        <ul class="list-checkbox" ng-controller="checkboxCtrl">
+        <ul class="list-checkbox" ng-controller="CheckboxCtrl">
             <li ng-repeat="role in roles">
                 <input type="checkbox" id="checkbox-{{role.id}}" data-checklist-model="user.roles" data-checklist-value="role" data-checklist-comparator="compareFn" />
                 <label for="checkbox-{{role.id}}">{{role.text}}</label>
@@ -48,7 +48,7 @@
         </ul>
     </form>
 </section>
-<section class="counter" ng-controller="CounterCtrl">
+<section class="container-counter" ng-controller="CounterCtrl">
     <h2>Счетчик значений</h2>
     <span counter data-value="quantity" data-min="0"></span>
 </section>
@@ -109,7 +109,7 @@
         </ul>
     </div>
 </section>
-<section class="side-menu">
+<section class="container-side-menu">
     <h2>Сайдменю</h2>
     <fieldset>
         <legend>Частным лицам</legend>
@@ -132,7 +132,7 @@
         </ul>
     </fieldset>
 </section>
-<section class="status-ad">
+<section class="container-status-ad">
     <h2>Статусы объявлений</h2>
     <ul class="list-status">
         <li>
@@ -149,6 +149,26 @@
         </li>
         <li>
             <span class="discontinued-publications">Снято с публикации</span>
+        </li>
+    </ul>
+</section>
+<section class="container-sidebar">
+    <h2>Боковое меню</h2>
+    <ul class="sidebar">
+        <li class="active">
+            <a href="#">Мой профиль</a>
+        </li>
+        <li>
+            <a href="#">Изменение пароля</a>
+        </li>
+        <li>
+            <a href="#">Мои объявления</a>
+        </li>
+        <li>
+            <a href="#">Группы объявлений</a>
+        </li>
+        <li>
+            <a href="#">Мои агенты</a>
         </li>
     </ul>
 </section>

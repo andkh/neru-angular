@@ -375,7 +375,7 @@ input#errorInput {
 }
 
 /* Side menu */
-.side-menu {
+.container-side-menu {
   fieldset {
     width: 360px;
     padding: 20px;
@@ -442,5 +442,32 @@ input#errorInput {
   .discontinued-publications {
     border-color: #0033ff;
     color: #0033ff;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  li:last-child {
+    a {
+      border-bottom: none;
+    }
+  }
+  .active {
+    a {
+      background: #3f5467;
+      border-bottom-color: #3f5467;
+    }
+  }
+  a {
+    display: block;
+    padding: 15px 20px;
+    background: #5d7486;
+    border-bottom: 1px solid #6d8495;
+    color: #fff;
+    &:hover, &:focus {
+      background: #3f5467;
+      border-bottom-color: #3f5467;
+    }
   }
 }
