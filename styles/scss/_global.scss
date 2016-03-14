@@ -177,6 +177,13 @@ input#errorInput {
   height: 32px;
   font-family: 'Roboto-Regular', sans-serif;
 }
+.counter-container {
+  .active {
+    background: #f58023;
+    border-color: #f58023;
+    color: #fff;
+  }
+}
 .counter-minus{
   @include border-top-left-radius(2px);
   @include border-bottom-left-radius(2px);
@@ -396,5 +403,44 @@ input#errorInput {
         text-decoration: underline;
       }
     }
+  }
+}
+
+/* Status ad */
+.list-status {
+  li, span {
+  display: inline-block;
+}
+  li {
+    margin-left: 20px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  span {
+    padding: 3px 10px;
+    border: 1px solid #000;
+    font: 14px 'Roboto-Regular', sans-serif;
+    @include border-radius(3px);
+  }
+  .pre-moderation {
+    border-color: #999999;
+    color: #999999;
+  }
+  .published {
+    border-color: #003366;
+    color: #003366;
+  }
+  .rejected {
+    border-color: #ff3333;
+    color: #ff3333;
+  }
+  .application-removal {
+    border-color: #039403;
+    color: #039403;
+  }
+  .discontinued-publications {
+    border-color: #0033ff;
+    color: #0033ff;
   }
 }

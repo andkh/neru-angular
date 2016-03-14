@@ -284,7 +284,14 @@ input#errorInput {
   font-family: 'Roboto-Regular', sans-serif;
 }
 
-/* line 180, ../scss/_global.scss */
+/* line 181, ../scss/_global.scss */
+.counter-container .active {
+  background: #f58023;
+  border-color: #f58023;
+  color: #fff;
+}
+
+/* line 187, ../scss/_global.scss */
 .counter-minus {
   -moz-border-radius-topleft: 2px;
   -webkit-border-top-left-radius: 2px;
@@ -294,7 +301,7 @@ input#errorInput {
   border-bottom-left-radius: 2px;
 }
 
-/* line 184, ../scss/_global.scss */
+/* line 191, ../scss/_global.scss */
 .counter-plus {
   -moz-border-radius-topright: 2px;
   -webkit-border-top-right-radius: 2px;
@@ -304,7 +311,7 @@ input#errorInput {
   border-bottom-right-radius: 2px;
 }
 
-/* line 188, ../scss/_global.scss */
+/* line 195, ../scss/_global.scss */
 .counter-minus, .counter-plus {
   background: #fff;
   color: #000;
@@ -313,14 +320,14 @@ input#errorInput {
   border: 1px solid #cccccc;
   font-size: 24px;
 }
-/* line 195, ../scss/_global.scss */
+/* line 202, ../scss/_global.scss */
 .counter-minus:focus, .counter-minus:hover, .counter-plus:focus, .counter-plus:hover {
   background: #f58023;
   border-color: #f58023;
   color: #fff;
 }
 
-/* line 201, ../scss/_global.scss */
+/* line 208, ../scss/_global.scss */
 .counter-field {
   text-align: center;
   border: none;
@@ -330,21 +337,21 @@ input#errorInput {
 }
 
 /* Checkbox */
-/* line 210, ../scss/_global.scss */
+/* line 217, ../scss/_global.scss */
 .list-checkbox {
   font: 14px 'Myriad-Pro-Regular', sans-serif;
   color: #666666;
 }
-/* line 213, ../scss/_global.scss */
+/* line 220, ../scss/_global.scss */
 .list-checkbox li {
   margin-top: 20px;
   line-height: 1em;
 }
-/* line 216, ../scss/_global.scss */
+/* line 223, ../scss/_global.scss */
 .list-checkbox li:first-child {
   margin: 0;
 }
-/* line 220, ../scss/_global.scss */
+/* line 227, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:before,
 .list-checkbox [type="checkbox"]:checked + label:before,
 .list-checkbox [type="checkbox"]:not(:checked) + label:after,
@@ -353,12 +360,12 @@ input#errorInput {
 .list-checkbox [type="checkbox"]:checked {
   position: absolute;
 }
-/* line 228, ../scss/_global.scss */
+/* line 235, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked),
 .list-checkbox [type="checkbox"]:checked {
   left: -9999px;
 }
-/* line 232, ../scss/_global.scss */
+/* line 239, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label,
 .list-checkbox [type="checkbox"]:checked + label {
   position: relative;
@@ -369,7 +376,7 @@ input#errorInput {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 242, ../scss/_global.scss */
+/* line 249, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:before,
 .list-checkbox [type="checkbox"]:checked + label:before {
   content: '';
@@ -379,7 +386,7 @@ input#errorInput {
   height: 12px;
   border: 1px solid #dfdfdf;
 }
-/* line 251, ../scss/_global.scss */
+/* line 258, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:after,
 .list-checkbox [type="checkbox"]:checked + label:after {
   content: url("../../img/checkbox-arrow.png");
@@ -392,7 +399,7 @@ input#errorInput {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 260, ../scss/_global.scss */
+/* line 267, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   -moz-transform: scale(0, 0);
@@ -400,7 +407,7 @@ input#errorInput {
   -webkit-transform: scale(0, 0);
   transform: scale(0, 0);
 }
-/* line 264, ../scss/_global.scss */
+/* line 271, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:checked + label:after {
   opacity: 1;
   -moz-transform: scale(1, 1);
@@ -410,45 +417,45 @@ input#errorInput {
 }
 
 /* Buttons */
-/* line 272, ../scss/_global.scss */
+/* line 279, ../scss/_global.scss */
 .container-buttons > div {
   margin-top: 35px;
 }
-/* line 274, ../scss/_global.scss */
+/* line 281, ../scss/_global.scss */
 .container-buttons > div:first-child {
   margin: 0;
 }
-/* line 278, ../scss/_global.scss */
+/* line 285, ../scss/_global.scss */
 .container-buttons li {
   display: inline-block;
 }
-/* line 280, ../scss/_global.scss */
+/* line 287, ../scss/_global.scss */
 .container-buttons li:first-child {
   margin-right: 20px;
 }
-/* line 284, ../scss/_global.scss */
+/* line 291, ../scss/_global.scss */
 .container-buttons a {
   color: #fff;
   font: 16px 'Roboto-Regular', sans-serif;
   line-height: 16px;
   text-align: center;
 }
-/* line 290, ../scss/_global.scss */
+/* line 297, ../scss/_global.scss */
 .container-buttons *:before {
   position: absolute;
 }
 
-/* line 295, ../scss/_global.scss */
+/* line 302, ../scss/_global.scss */
 .btns-rectangular-icon a, .btns-rectangular a, .btns-arrow a, .btns-search a {
   position: relative;
   display: inline-block;
 }
 
-/* line 302, ../scss/_global.scss */
+/* line 309, ../scss/_global.scss */
 .btns-rectangular-icon li:first-child a, .btns-rectangular li:first-child a {
   background: #5d7486;
 }
-/* line 306, ../scss/_global.scss */
+/* line 313, ../scss/_global.scss */
 .btns-rectangular-icon a, .btns-rectangular a {
   background: #465b6b;
   -moz-border-radius: 3px;
@@ -456,12 +463,12 @@ input#errorInput {
   border-radius: 3px;
 }
 
-/* line 312, ../scss/_global.scss */
+/* line 319, ../scss/_global.scss */
 .btns-rectangular-icon a {
   width: 230px;
   padding: 8px 20px 8px 40px;
 }
-/* line 315, ../scss/_global.scss */
+/* line 322, ../scss/_global.scss */
 .btns-rectangular-icon a:before {
   content: url("../../img/plus.png");
   top: 50%;
@@ -471,26 +478,26 @@ input#errorInput {
   margin-top: -7px;
 }
 
-/* line 326, ../scss/_global.scss */
+/* line 333, ../scss/_global.scss */
 .btns-rectangular a {
   width: 195px;
   padding: 8px 0;
 }
 
-/* line 333, ../scss/_global.scss */
+/* line 340, ../scss/_global.scss */
 .btns-arrow li:first-child span {
   background: #e85e5c;
 }
-/* line 335, ../scss/_global.scss */
+/* line 342, ../scss/_global.scss */
 .btns-arrow li:first-child span:before {
   content: url("../../img/btn-arrow-light.png");
 }
-/* line 340, ../scss/_global.scss */
+/* line 347, ../scss/_global.scss */
 .btns-arrow a {
   width: 100px;
   padding-left: 15px;
 }
-/* line 343, ../scss/_global.scss */
+/* line 350, ../scss/_global.scss */
 .btns-arrow a span {
   display: inline-block;
   padding: 8px 19px;
@@ -499,18 +506,18 @@ input#errorInput {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 348, ../scss/_global.scss */
+/* line 355, ../scss/_global.scss */
 .btns-arrow a span:before {
   content: url("../../img/btn-arrow-dark.png");
   top: 0;
   left: 3%;
 }
 
-/* line 358, ../scss/_global.scss */
+/* line 365, ../scss/_global.scss */
 .btns-search li:first-child a {
   background: #f58023;
 }
-/* line 362, ../scss/_global.scss */
+/* line 369, ../scss/_global.scss */
 .btns-search a {
   width: 88px;
   padding: 8px 0;
@@ -521,7 +528,7 @@ input#errorInput {
 }
 
 /* Side menu */
-/* line 372, ../scss/_global.scss */
+/* line 379, ../scss/_global.scss */
 .side-menu fieldset {
   width: 360px;
   padding: 20px;
@@ -530,29 +537,77 @@ input#errorInput {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 378, ../scss/_global.scss */
+/* line 385, ../scss/_global.scss */
 .side-menu legend {
   padding: 0 10px;
   font: 16px 'Roboto-Regular', sans-serif;
   color: #3f5467;
 }
-/* line 384, ../scss/_global.scss */
+/* line 391, ../scss/_global.scss */
 .side-menu .active a {
   text-decoration: underline;
 }
-/* line 388, ../scss/_global.scss */
+/* line 395, ../scss/_global.scss */
 .side-menu li {
   margin-top: 15px;
 }
-/* line 390, ../scss/_global.scss */
+/* line 397, ../scss/_global.scss */
 .side-menu li:first-child {
   margin: 0;
 }
-/* line 393, ../scss/_global.scss */
+/* line 400, ../scss/_global.scss */
 .side-menu li a {
   color: #0088cc;
 }
-/* line 395, ../scss/_global.scss */
+/* line 402, ../scss/_global.scss */
 .side-menu li a:hover {
   text-decoration: underline;
+}
+
+/* Status ad */
+/* line 411, ../scss/_global.scss */
+.list-status li, .list-status span {
+  display: inline-block;
+}
+/* line 414, ../scss/_global.scss */
+.list-status li {
+  margin-left: 20px;
+}
+/* line 416, ../scss/_global.scss */
+.list-status li:first-child {
+  margin: 0;
+}
+/* line 420, ../scss/_global.scss */
+.list-status span {
+  padding: 3px 10px;
+  border: 1px solid #000;
+  font: 14px 'Roboto-Regular', sans-serif;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 426, ../scss/_global.scss */
+.list-status .pre-moderation {
+  border-color: #999999;
+  color: #999999;
+}
+/* line 430, ../scss/_global.scss */
+.list-status .published {
+  border-color: #003366;
+  color: #003366;
+}
+/* line 434, ../scss/_global.scss */
+.list-status .rejected {
+  border-color: #ff3333;
+  color: #ff3333;
+}
+/* line 438, ../scss/_global.scss */
+.list-status .application-removal {
+  border-color: #039403;
+  color: #039403;
+}
+/* line 442, ../scss/_global.scss */
+.list-status .discontinued-publications {
+  border-color: #0033ff;
+  color: #0033ff;
 }
