@@ -1,3 +1,19 @@
-/**
- * Created by andrewkharsun on 3/13/16.
- */
+app.controller('CounterCtrl', function( $scope ) {
+    $scope.quantity = 2;
+
+});
+
+app.controller('checkboxCtrl', function($scope) {
+    $scope.roles = [
+        {id: 1, text: 'Школы, лицеи, гимназии'},
+        {id: 2, text: 'Школы, лицеи, гимназии'}
+    ];
+    $scope.user = {
+        roles: [$scope.roles[0]]
+    };
+    $scope.selectedUsers = $scope.user.roles;
+
+    $scope.compareFn = function(obj1, obj2){
+        return obj1.id === obj2.id;
+    };
+});
