@@ -224,6 +224,10 @@ input#errorInput {
     position: relative;
     padding-left: 25px;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   [type="checkbox"]:not(:checked) + label:before,
   [type="checkbox"]:checked + label:before {

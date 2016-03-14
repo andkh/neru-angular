@@ -348,8 +348,12 @@ input#errorInput {
   position: relative;
   padding-left: 25px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-/* line 228, ../scss/_global.scss */
+/* line 232, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:before,
 .list-checkbox [type="checkbox"]:checked + label:before {
   content: '';
@@ -359,7 +363,7 @@ input#errorInput {
   height: 12px;
   border: 1px solid #dfdfdf;
 }
-/* line 237, ../scss/_global.scss */
+/* line 241, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:after,
 .list-checkbox [type="checkbox"]:checked + label:after {
   content: url("../../img/checkbox-arrow.png");
@@ -372,7 +376,7 @@ input#errorInput {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 246, ../scss/_global.scss */
+/* line 250, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   -moz-transform: scale(0, 0);
@@ -380,7 +384,7 @@ input#errorInput {
   -webkit-transform: scale(0, 0);
   transform: scale(0, 0);
 }
-/* line 250, ../scss/_global.scss */
+/* line 254, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:checked + label:after {
   opacity: 1;
   -moz-transform: scale(1, 1);
