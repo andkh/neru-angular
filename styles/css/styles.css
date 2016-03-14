@@ -92,7 +92,7 @@ body {
 }
 
 /* line 29, ../scss/_global.scss */
-a, input {
+a, input, textarea {
   outline: none;
 }
 
@@ -137,12 +137,12 @@ h2 {
   margin-left: 178px;
 }
 
-/* line 67, ../scss/_global.scss */
+/* line 66, ../scss/_global.scss */
 .status li:first-child {
   margin-bottom: 40px;
 }
 
-/* line 71, ../scss/_global.scss */
+/* line 70, ../scss/_global.scss */
 label[for="region"] {
   position: relative;
   z-index: 5;
@@ -151,7 +151,7 @@ label[for="region"] {
   font: 14px 'Roboto-Regular', sans-serif;
   color: #666666;
 }
-/* line 78, ../scss/_global.scss */
+/* line 77, ../scss/_global.scss */
 label[for="region"]:after {
   content: '*';
   position: absolute;
@@ -159,7 +159,7 @@ label[for="region"]:after {
   color: #ff0000;
 }
 
-/* line 85, ../scss/_global.scss */
+/* line 84, ../scss/_global.scss */
 input#region {
   width: 125px;
   padding: 2px 10px;
@@ -169,39 +169,39 @@ input#region {
   font: italic 10px 'Arial', sans-serif;
   line-height: 10px;
 }
-/* line 93, ../scss/_global.scss */
+/* line 92, ../scss/_global.scss */
 input#region::-webkit-input-placeholder {
   color: #c5c5c5;
 }
-/* line 96, ../scss/_global.scss */
+/* line 95, ../scss/_global.scss */
 input#region::-moz-placeholder {
   color: #c5c5c5;
 }
-/* line 99, ../scss/_global.scss */
+/* line 98, ../scss/_global.scss */
 input#region:-moz-placeholder {
   color: #c5c5c5;
 }
 
-/* line 103, ../scss/_global.scss */
+/* line 102, ../scss/_global.scss */
 input#streetName {
   width: 350px;
   padding: 0 5px;
   text-align: left;
 }
-/* line 107, ../scss/_global.scss */
+/* line 106, ../scss/_global.scss */
 input#streetName::-webkit-input-placeholder {
   color: #cccccc;
 }
-/* line 110, ../scss/_global.scss */
+/* line 109, ../scss/_global.scss */
 input#streetName::-moz-placeholder {
   color: #cccccc;
 }
-/* line 113, ../scss/_global.scss */
+/* line 112, ../scss/_global.scss */
 input#streetName:-moz-placeholder {
   color: #cccccc;
 }
 
-/* line 117, ../scss/_global.scss */
+/* line 116, ../scss/_global.scss */
 input#focusInput {
   border: 1px solid #5d7486;
   -moz-box-shadow: #4e96ce 0 0 4px 1px;
@@ -209,15 +209,31 @@ input#focusInput {
   box-shadow: #4e96ce 0 0 4px 1px;
 }
 
-/* line 121, ../scss/_global.scss */
+/* line 120, ../scss/_global.scss */
 input#errorInput {
   border: 1px solid #ff4242;
 }
 
-/* line 124, ../scss/_global.scss */
+/* line 123, ../scss/_global.scss */
 .error-message {
   display: inline-block;
   margin-left: 10px;
   font: 12px 'Roboto-Regular', sans-serif;
   color: #ff0000;
+}
+
+/* Textarea */
+/* line 131, ../scss/_global.scss */
+.container-textarea h2 {
+  margin-bottom: 20px;
+}
+/* line 134, ../scss/_global.scss */
+.container-textarea textarea {
+  width: 445px;
+  height: 165px;
+  border: 1px solid #dfdfdf;
+  resize: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }

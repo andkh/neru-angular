@@ -26,7 +26,7 @@ body {
   font: 14px 'Arial', sans-serif;
   padding: 40px;
 }
-a, input {
+a, input, textarea {
   outline: none;
 }
 h2 {
@@ -125,4 +125,17 @@ input#errorInput {
   margin-left: 10px;
   font: 12px 'Roboto-Regular', sans-serif;
   color: #ff0000;
+}
+/* Textarea */
+.container-textarea {
+  h2 {
+    margin-bottom: 20px;
+  }
+  textarea {
+    width: 445px;
+    height: 165px;
+    border: 1px solid #dfdfdf;
+    resize: none;
+    @include border-radius(2px)
+  }
 }
