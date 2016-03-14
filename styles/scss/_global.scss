@@ -366,3 +366,35 @@ input#errorInput {
     @include border-radius(3px);
   }
 }
+
+/* Side menu */
+.side-menu {
+  fieldset {
+    width: 360px;
+    padding: 20px;
+    border: 1px solid #dfdfdf;
+    @include border-radius(3px);
+  }
+  legend {
+    padding: 0 10px;
+    font: 16px 'Roboto-Regular', sans-serif;
+    color: #3f5467;
+  }
+  .active {
+    a {
+      text-decoration: underline;
+    }
+  }
+  li {
+    margin-top: 15px;
+    &:first-child {
+      margin: 0;
+    }
+    a {
+      color: #0088cc;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

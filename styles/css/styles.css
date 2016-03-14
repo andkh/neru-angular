@@ -519,3 +519,40 @@ input#errorInput {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
+
+/* Side menu */
+/* line 372, ../scss/_global.scss */
+.side-menu fieldset {
+  width: 360px;
+  padding: 20px;
+  border: 1px solid #dfdfdf;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 378, ../scss/_global.scss */
+.side-menu legend {
+  padding: 0 10px;
+  font: 16px 'Roboto-Regular', sans-serif;
+  color: #3f5467;
+}
+/* line 384, ../scss/_global.scss */
+.side-menu .active a {
+  text-decoration: underline;
+}
+/* line 388, ../scss/_global.scss */
+.side-menu li {
+  margin-top: 15px;
+}
+/* line 390, ../scss/_global.scss */
+.side-menu li:first-child {
+  margin: 0;
+}
+/* line 393, ../scss/_global.scss */
+.side-menu li a {
+  color: #0088cc;
+}
+/* line 395, ../scss/_global.scss */
+.side-menu li a:hover {
+  text-decoration: underline;
+}
