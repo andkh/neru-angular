@@ -574,6 +574,24 @@ input#errorInput {
   }
 }
 /* Show/hide Content */
+.container-drop-content {
+  h3 {
+    font: 15px 'PT Sans', sans-serif;
+    color: #000000;
+  }
+  .open {
+    .question:after {
+      border-top: none;
+      border-bottom: 5px solid #0d8ecf;
+    }
+  }
+  .close {
+    span {
+      overflow: hidden;
+      height: 0;
+    }
+  }
+}
 .list-questions {
   li {
     margin-top: 10px;
@@ -600,20 +618,6 @@ input#errorInput {
   }
   .answer {
     display: block;
-  }
-}
-.container-drop-content {
-  .open {
-    .question:after {
-      border-top: none;
-      border-bottom: 5px solid #0d8ecf;
-    }
-  }
-  .close {
-    span {
-      overflow: hidden;
-      height: 0;
-    }
   }
 }
 
