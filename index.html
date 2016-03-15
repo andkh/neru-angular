@@ -45,7 +45,7 @@
     <ul ng-controller="SelectCtrl">
         <li>
             <ui-select ng-model="name.selected" theme="selectize" ng-disabled="disabled" title="Choose a number">
-                <ui-select-match placeholder="Все виды">{{$select.selected.name}}</ui-select-match>
+                <ui-select-match>{{$select.selected.name}}</ui-select-match>
                 <ui-select-choices repeat="number in numbers | filter: $select.search">
                     <span ng-bind-html="number.name | highlight: $select.search"></span>
                 </ui-select-choices>
