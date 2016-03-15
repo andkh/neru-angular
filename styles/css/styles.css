@@ -238,9 +238,9 @@ input#streetName:-moz-placeholder {
 /* line 144, ../scss/_global.scss */
 input#focusInput {
   border: 1px solid #5d7486;
-  -moz-box-shadow: #4e96ce 0 0 4px 1px;
-  -webkit-box-shadow: #4e96ce 0 0 4px 1px;
-  box-shadow: #4e96ce 0 0 4px 1px;
+  -moz-box-shadow: #4e96ce 0 0 4px;
+  -webkit-box-shadow: #4e96ce 0 0 4px;
+  box-shadow: #4e96ce 0 0 4px;
 }
 
 /* line 148, ../scss/_global.scss */
@@ -664,4 +664,110 @@ input#errorInput {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+}
+
+/* Ad */
+/* line 492, ../scss/_global.scss */
+.list-ad {
+  overflow: hidden;
+}
+/* line 494, ../scss/_global.scss */
+.list-ad > li {
+  width: 270px;
+  float: left;
+  border: 1px solid #e2e2e2;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-left: 30px;
+  position: relative;
+}
+/* line 503, ../scss/_global.scss */
+.list-ad > li:first-child {
+  margin: 0;
+}
+/* line 507, ../scss/_global.scss */
+.list-ad .apartment-address span, .list-ad h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 511, ../scss/_global.scss */
+.list-ad h4 {
+  color: #333;
+  padding: 18px 20px;
+  font: 16px 'Roboto-Regular', sans-serif;
+  line-height: 16px;
+  margin: 0;
+}
+
+/* line 519, ../scss/_global.scss */
+.apartment-link, .apartment-info li {
+  display: inline-block;
+}
+
+/* line 522, ../scss/_global.scss */
+.img-wrap {
+  position: relative;
+}
+/* line 524, ../scss/_global.scss */
+.img-wrap span {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 15px;
+  background: rgba(111, 133, 154, 0.9);
+  font: italic 14px 'Roboto-Regular', sans-serif;
+  color: #fff;
+}
+/* line 533, ../scss/_global.scss */
+.img-wrap img {
+  width: 268px;
+  height: 174px;
+}
+
+/* line 538, ../scss/_global.scss */
+.apartment-info {
+  padding: 15px;
+}
+/* line 540, ../scss/_global.scss */
+.apartment-info ul {
+  overflow: hidden;
+}
+/* line 543, ../scss/_global.scss */
+.apartment-info li {
+  float: left;
+  padding: 0 10px;
+  color: #999999;
+  border-left: 1px solid #999999;
+}
+/* line 548, ../scss/_global.scss */
+.apartment-info li:first-child {
+  border: none;
+}
+
+/* line 553, ../scss/_global.scss */
+.apartment-address {
+  padding: 15px 0 15px 20px;
+  background: #f5f5f5;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+}
+/* line 558, ../scss/_global.scss */
+.apartment-address span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 215px;
+  padding-left: 20px;
+  font: 14px 'Roboto-Regular', sans-serif;
+  color: #333333;
+}
+/* line 566, ../scss/_global.scss */
+.apartment-address span:before {
+  content: url("../../img/icon-address.png");
+  position: absolute;
+  width: 11px;
+  height: 16px;
+  top: 2px;
+  left: 0;
 }
