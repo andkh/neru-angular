@@ -771,3 +771,60 @@ input#errorInput {
   top: 2px;
   left: 0;
 }
+
+/* Tables */
+/* line 579, ../scss/_global.scss */
+.container-tables h2 + div {
+  margin-bottom: 40px;
+}
+
+/* line 583, ../scss/_global.scss */
+.vertical, .horizontal {
+  font-family: 'PT Sans', sans-serif;
+}
+/* line 585, ../scss/_global.scss */
+.vertical h3, .horizontal h3 {
+  font-size: 16px;
+  color: #333333;
+}
+
+/* line 590, ../scss/_global.scss */
+.vertical-table, .horizontal-table {
+  width: 735px;
+  border: 1px solid #dfdfdf;
+}
+/* line 594, ../scss/_global.scss */
+.vertical-table tr, .horizontal-table tr {
+  border-bottom: 1px dashed #dfdfdf;
+}
+/* line 597, ../scss/_global.scss */
+.vertical-table td, .horizontal-table td {
+  border-right: 1px solid #dfdfdf;
+  padding: 15px 20px;
+  color: #000;
+}
+
+/* line 605, ../scss/_global.scss */
+.vertical-table tr:nth-child(2n) {
+  background: #f8f8f8;
+}
+/* line 608, ../scss/_global.scss */
+.vertical-table td {
+  width: 50%;
+  font-size: 15px;
+}
+/* line 611, ../scss/_global.scss */
+.vertical-table td:first-child {
+  color: #999999;
+}
+
+/* line 617, ../scss/_global.scss */
+.horizontal-table tr:first-child {
+  background: #f8f8f8;
+  border-bottom-style: solid;
+}
+/* line 620, ../scss/_global.scss */
+.horizontal-table tr:first-child td {
+  font-size: 15px;
+  color: #999999;
+}

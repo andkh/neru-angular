@@ -573,3 +573,53 @@ input#errorInput {
     }
   }
 }
+
+/* Tables */
+.container-tables {
+  h2 + div {
+    margin-bottom: 40px;
+  }
+}
+.vertical, .horizontal {
+  font-family: 'PT Sans', sans-serif;
+  h3 {
+    font-size: 16px;
+    color: #333333;
+  }
+}
+.vertical-table, .horizontal-table {
+  width: 735px;
+  border: 1px solid #dfdfdf;
+
+  tr {
+    border-bottom: 1px dashed #dfdfdf;
+  }
+  td {
+    border-right: 1px solid #dfdfdf;
+    padding: 15px 20px;
+    color: #000;
+  }
+}
+
+.vertical-table {
+  tr:nth-child(2n) {
+    background: #f8f8f8;
+  }
+  td {
+    width: 50%;
+    font-size: 15px;
+    &:first-child {
+      color: #999999;
+    }
+  }
+}
+.horizontal-table {
+  tr:first-child {
+    background: #f8f8f8;
+    border-bottom-style: solid;
+    td {
+      font-size: 15px;
+      color: #999999;
+    }
+  }
+}
