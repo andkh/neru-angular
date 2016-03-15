@@ -202,43 +202,26 @@ app.directive('checklistModel', ['$parse', '$compile', function($parse, $compile
     };
 }]);
 
-// Map
-app.run(function($rootScope) {
-    $rootScope.mouseover = function() {
-        console.log('mouseover', this);
-        this.style.backgroundColor = 'grey';
-    };
-    $rootScope.mouseout = function() {
-        this.style.backgroundColor = 'white';
-    };
-    $rootScope.click = function() {console.log('click')};
-    $rootScope.customMarkers = [
-        {address: "1600 pennsylvania ave, washington DC", "class": "my1"},
-        {address: "600 pennsylvania ave, washington DC",  "class": "my2"}
-    ];
-});
-
 // Show/Hide Content
-app
-    .directive('sliderToggle', function() {
-        return {
-            restrict: 'AE',
-            link: function(scope, element, attrs) {
-                var target = element.next()[0];
-                element.parent().addClass('close');
+app.directive('sliderToggle', function() {
+    return {
+        restrict: 'AE',
+        link: function(scope, element, attrs) {
+            var target = element.next()[0];
+            element.parent().addClass('close');
 
-                attrs.expanded = false;
+            attrs.expanded = false;
 
-                element.bind('click', function() {
-                    if(!attrs.expanded) {
-                        element.parent().removeClass('close').addClass('open');
-                        target.style.height = '16px';
-                    } else {
-                        element.parent().removeClass('open').addClass('close');
-                        target.style.height = 0;
-                    }
-                    attrs.expanded = !attrs.expanded;
-                });
-            }
+            element.bind('click', function() {
+                if(!attrs.expanded) {
+                    element.parent().removeClass('close').addClass('open');
+                    target.style.height = '16px';
+                } else {
+                    element.parent().removeClass('open').addClass('close');
+                    target.style.height = 0;
+                }
+                attrs.expanded = !attrs.expanded;
+            });
         }
-    });
+    }
+});

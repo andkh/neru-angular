@@ -24,11 +24,3 @@ app.controller("NavCtrl", function($scope, $location) {
         return page === current ? "active" : "";
     };
 });
-
-app.controller('MapCtrl', function(NgMap) {
-    NgMap.getMap().then(function(map) {
-        console.log(map.getCenter());
-        console.log('markers', map.markers);
-        console.log('shapes', map.shapes);
-    });
-});
