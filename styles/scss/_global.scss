@@ -573,6 +573,42 @@ input#errorInput {
     }
   }
 }
+/* Contact info */
+.container-contact {
+  h3 {
+    font: 19px 'PT Sans', sans-serif;
+    color: #333333;
+  }
+  .wrap-map {
+    border: 1px solid #e0e0e0;
+    @include border-radius(3px);
+  }
+}
+.list-contacts {
+  overflow: hidden;
+  > li {
+    float: left;
+    width: 480px;
+    margin-left: 40px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+}
+.contact-information {
+  margin-bottom: 20px;
+  li {
+    margin-top: 5px;
+    font: 15px 'Roboto-Regular', sans-serif;
+    color: #010101;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  span {
+    color: #999999;
+  }
+}
 
 /* Tables */
 .container-tables {

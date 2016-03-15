@@ -224,7 +224,7 @@
 </section>
 <section class="container-sidebar">
     <h2>Боковое меню</h2>
-    <ul class="sidebar" ng-controller="navCtrl">
+    <ul class="sidebar" ng-controller="NavCtrl">
         <li ng-class="menuClass('profile')">
             <a href="#!profile" class="active">Мой профиль</a>
         </li>
@@ -251,6 +251,59 @@
     <h2>Важная информация</h2>
     <p class="important">Элемент «Важно». (класс important), который используется для выделения особо важной информации. И еще немного специально
         написанного текста,чтобы получилось несколько строк для наглядности.</p>
+</section>
+<section class="container-contact">
+    <h2>Контактная информация</h2>
+    <ul class="list-contacts">
+        <li>
+            <h3>Главный офис</h3>
+            <ul class="contact-information">
+                <li>
+                    <span>Адрес:</span> Черкасская область, г. Черкассы, ул. Валерия Лобановского, 74 (оф. 12)
+                </li>
+                <li>
+                    <span>Телефоны:</span> (096)712-31-21, (093)221-09-20, (097)399-86-09
+                </li>
+            </ul>
+            <div class="wrap-map"  map-lazy-load="https://maps.google.com/maps/api/js">
+                <ng-map center="[49.4434, 32.0164]" zoom="15">
+                    <marker position="49.4434, 32.0164" title="Hello World!"
+                            optimized="false"
+                            icon="{
+                                    url:'img/map-marker.png',
+                                    scaledSize:[30,45],
+                                    origin: [0,0],
+                                    anchor: [20,20]
+                                  }">
+
+                    </marker>
+                </ng-map>
+            </div>
+        </li>
+        <li>
+            <h3>Офис на Смелянской</h3>
+            <ul class="contact-information">
+                <li>
+                    <span>Адрес:</span> Черкасская область, г. Черкассы, ул. Валерия Лобановского, 74 (оф. 12)
+                </li>
+                <li>
+                    <span>Телефоны:</span> (096)712-31-21, (093)221-09-20, (097)399-86-09
+                </li>
+            </ul>
+            <div class="wrap-map" map-lazy-load="https://maps.google.com/maps/api/js">
+                <ng-map center="[49.4449, 32.0201]" zoom="15">
+                    <marker position="49.4449, 32.0201" optimized="false"
+                            icon="{
+                                    url:'img/map-marker.png',
+                                    scaledSize:[30,45],
+                                    origin: [0,0],
+                                    anchor: [20,20]
+                                  }">
+                    </marker>
+                </ng-map>
+            </div>
+        </li>
+    </ul>
 </section>
 <section class="container-tables">
     <h2>Таблицы</h2>
@@ -310,6 +363,8 @@
 </section>
 
 <script src="lib/angular.min.js"></script>
+<script src="lib/ng-map.min.js"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
 <script src="js/app.js"></script>
 <script src="js/controllers.js"></script>
 <script src="js/directives.js"></script>

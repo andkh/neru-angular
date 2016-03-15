@@ -18,9 +18,17 @@ app.controller('CheckboxCtrl', function($scope) {
     };
 });
 
-app.controller("navCtrl", function($scope, $location) {
+app.controller("NavCtrl", function($scope, $location) {
     $scope.menuClass = function(page) {
         var current = $location.path().substring(1);
         return page === current ? "active" : "";
     };
+});
+
+app.controller('MapCtrl', function(NgMap) {
+    NgMap.getMap().then(function(map) {
+        console.log(map.getCenter());
+        console.log('markers', map.markers);
+        console.log('shapes', map.shapes);
+    });
 });

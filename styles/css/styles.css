@@ -772,58 +772,106 @@ input#errorInput {
   left: 0;
 }
 
+/* Contact info */
+/* line 578, ../scss/_global.scss */
+.container-contact h3 {
+  font: 19px 'PT Sans', sans-serif;
+  color: #333333;
+}
+/* line 582, ../scss/_global.scss */
+.container-contact .wrap-map {
+  border: 1px solid #e0e0e0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 587, ../scss/_global.scss */
+.list-contacts {
+  overflow: hidden;
+}
+/* line 589, ../scss/_global.scss */
+.list-contacts > li {
+  float: left;
+  width: 480px;
+  margin-left: 40px;
+}
+/* line 593, ../scss/_global.scss */
+.list-contacts > li:first-child {
+  margin: 0;
+}
+
+/* line 598, ../scss/_global.scss */
+.contact-information {
+  margin-bottom: 20px;
+}
+/* line 600, ../scss/_global.scss */
+.contact-information li {
+  margin-top: 5px;
+  font: 15px 'Roboto-Regular', sans-serif;
+  color: #010101;
+}
+/* line 604, ../scss/_global.scss */
+.contact-information li:first-child {
+  margin: 0;
+}
+/* line 608, ../scss/_global.scss */
+.contact-information span {
+  color: #999999;
+}
+
 /* Tables */
-/* line 579, ../scss/_global.scss */
+/* line 615, ../scss/_global.scss */
 .container-tables h2 + div {
   margin-bottom: 40px;
 }
 
-/* line 583, ../scss/_global.scss */
+/* line 619, ../scss/_global.scss */
 .vertical, .horizontal {
   font-family: 'PT Sans', sans-serif;
 }
-/* line 585, ../scss/_global.scss */
+/* line 621, ../scss/_global.scss */
 .vertical h3, .horizontal h3 {
   font-size: 16px;
   color: #333333;
 }
 
-/* line 590, ../scss/_global.scss */
+/* line 626, ../scss/_global.scss */
 .vertical-table, .horizontal-table {
   width: 735px;
   border: 1px solid #dfdfdf;
 }
-/* line 594, ../scss/_global.scss */
+/* line 630, ../scss/_global.scss */
 .vertical-table tr, .horizontal-table tr {
   border-bottom: 1px dashed #dfdfdf;
 }
-/* line 597, ../scss/_global.scss */
+/* line 633, ../scss/_global.scss */
 .vertical-table td, .horizontal-table td {
   border-right: 1px solid #dfdfdf;
   padding: 15px 20px;
   color: #000;
 }
 
-/* line 605, ../scss/_global.scss */
+/* line 641, ../scss/_global.scss */
 .vertical-table tr:nth-child(2n) {
   background: #f8f8f8;
 }
-/* line 608, ../scss/_global.scss */
+/* line 644, ../scss/_global.scss */
 .vertical-table td {
   width: 50%;
   font-size: 15px;
 }
-/* line 611, ../scss/_global.scss */
+/* line 647, ../scss/_global.scss */
 .vertical-table td:first-child {
   color: #999999;
 }
 
-/* line 617, ../scss/_global.scss */
+/* line 653, ../scss/_global.scss */
 .horizontal-table tr:first-child {
   background: #f8f8f8;
   border-bottom-style: solid;
 }
-/* line 620, ../scss/_global.scss */
+/* line 656, ../scss/_global.scss */
 .horizontal-table tr:first-child td {
   font-size: 15px;
   color: #999999;
