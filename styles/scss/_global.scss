@@ -573,6 +573,50 @@ input#errorInput {
     }
   }
 }
+/* Show/hide Content */
+.list-questions {
+  li {
+    margin-top: 10px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  .question {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #0d8ecf;
+    font: 21px 'PT Sans', sans-serif;
+    color: #0d8ecf;
+    cursor: pointer;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      right: -15px;
+      border: 5px solid transparent;
+      border-top: 5px solid #0d8ecf;
+    }
+  }
+  .answer {
+    display: block;
+  }
+}
+.container-drop-content {
+  .open {
+    .question:after {
+      border-top: none;
+      border-bottom: 5px solid #0d8ecf;
+    }
+  }
+  .close {
+    span {
+      overflow: hidden;
+      height: 0;
+    }
+  }
+}
+
 /* Contact info */
 .container-contact {
   h3 {
