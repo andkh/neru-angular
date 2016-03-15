@@ -1,2 +1,1 @@
-
-var app = angular.module('app', ['ngMap']);
+var app = angular.module('app', ['ngMap', 'ngSanitize', 'ui.select']);

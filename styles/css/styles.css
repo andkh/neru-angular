@@ -64,6 +64,320 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/*!
+ * ui-select
+ * http://github.com/angular-ui/ui-select
+ * Version: 0.14.8 - 2016-02-18T22:01:43.880Z
+ * License: MIT
+ */
+/* Style when highlighting a search. */
+/* line 10, ../scss/_ui-select.scss */
+.ui-select-highlight {
+  font-weight: bold;
+}
+
+/* line 14, ../scss/_ui-select.scss */
+.ui-select-offscreen {
+  clip: rect(0 0 0 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  outline: 0 !important;
+  left: 0px !important;
+  top: 0px !important;
+}
+
+/* line 29, ../scss/_ui-select.scss */
+.ui-select-choices-row:hover {
+  background-color: #f5f5f5;
+}
+
+/* Select2 theme */
+/* Mark invalid Select2 */
+/* line 36, ../scss/_ui-select.scss */
+.ng-dirty.ng-invalid > a.select2-choice {
+  border-color: #D44950;
+}
+
+/* line 40, ../scss/_ui-select.scss */
+.select2-result-single {
+  padding-left: 0;
+}
+
+/* line 44, ../scss/_ui-select.scss */
+.select2-locked > .select2-search-choice-close {
+  display: none;
+}
+
+/* line 48, ../scss/_ui-select.scss */
+.select-locked > .ui-select-match-close {
+  display: none;
+}
+
+/* line 52, ../scss/_ui-select.scss */
+body > .select2-container.open {
+  z-index: 9999;
+  /* The z-index Select2 applies to the select2-drop */
+}
+
+/* Handle up direction Select2 */
+/* line 57, ../scss/_ui-select.scss */
+.ui-select-container[theme="select2"].direction-up .ui-select-match {
+  border-radius: 4px;
+  /* FIXME hardcoded value :-/ */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 62, ../scss/_ui-select.scss */
+.ui-select-container[theme="select2"].direction-up .ui-select-dropdown {
+  border-radius: 4px;
+  /* FIXME hardcoded value :-/ */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-width: 1px;
+  /* FIXME hardcoded value :-/ */
+  border-top-style: solid;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.25);
+  margin-top: -4px;
+  /* FIXME hardcoded value :-/ */
+}
+
+/* line 74, ../scss/_ui-select.scss */
+.ui-select-container[theme="select2"].direction-up .ui-select-dropdown .select2-search {
+  margin-top: 4px;
+  /* FIXME hardcoded value :-/ */
+}
+
+/* line 77, ../scss/_ui-select.scss */
+.ui-select-container[theme="select2"].direction-up.select2-dropdown-open .ui-select-match {
+  border-bottom-color: #5897fb;
+}
+
+/* Selectize theme */
+/* Helper class to show styles when focus */
+/* line 84, ../scss/_ui-select.scss */
+.selectize-input.selectize-focus {
+  border-color: #007FBB !important;
+}
+
+/* Fix input width for Selectize theme */
+/* line 89, ../scss/_ui-select.scss */
+.selectize-control > .selectize-input > input {
+  width: 100%;
+}
+
+/* Fix dropdown width for Selectize theme */
+/* line 94, ../scss/_ui-select.scss */
+.selectize-control > .selectize-dropdown {
+  width: 100%;
+}
+
+/* Mark invalid Selectize */
+/* line 99, ../scss/_ui-select.scss */
+.ng-dirty.ng-invalid > div.selectize-input {
+  border-color: #D44950;
+}
+
+/* Handle up direction Selectize */
+/* line 104, ../scss/_ui-select.scss */
+.ui-select-container[theme="selectize"].direction-up .ui-select-dropdown {
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.25);
+  margin-top: -2px;
+  /* FIXME hardcoded value :-/ */
+}
+
+/* Bootstrap theme */
+/* Helper class to show styles when focus */
+/* line 113, ../scss/_ui-select.scss */
+.btn-default-focus {
+  color: #333;
+  background-color: #EBEBEB;
+  border-color: #ADADAD;
+  text-decoration: none;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* line 123, ../scss/_ui-select.scss */
+.ui-select-bootstrap .ui-select-toggle {
+  position: relative;
+}
+
+/* line 127, ../scss/_ui-select.scss */
+.ui-select-bootstrap .ui-select-toggle > .caret {
+  position: absolute;
+  height: 10px;
+  top: 50%;
+  right: 10px;
+  margin-top: -2px;
+}
+
+/* Fix Bootstrap dropdown position when inside a input-group */
+/* line 136, ../scss/_ui-select.scss */
+.input-group > .ui-select-bootstrap.dropdown {
+  /* Instead of relative */
+  position: static;
+}
+
+/* line 141, ../scss/_ui-select.scss */
+.input-group > .ui-select-bootstrap > input.ui-select-search.form-control {
+  border-radius: 4px;
+  /* FIXME hardcoded value :-/ */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* line 146, ../scss/_ui-select.scss */
+.input-group > .ui-select-bootstrap > input.ui-select-search.form-control.direction-up {
+  border-radius: 4px !important;
+  /* FIXME hardcoded value :-/ */
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+/* line 152, ../scss/_ui-select.scss */
+.ui-select-bootstrap > .ui-select-match > .btn {
+  /* Instead of center because of .btn */
+  text-align: left !important;
+}
+
+/* line 157, ../scss/_ui-select.scss */
+.ui-select-bootstrap > .ui-select-match > .caret {
+  position: absolute;
+  top: 45%;
+  right: 15px;
+}
+
+/* See Scrollable Menu with Bootstrap 3 http://stackoverflow.com/questions/19227496 */
+/* line 164, ../scss/_ui-select.scss */
+.ui-select-bootstrap > .ui-select-choices {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+  margin-top: -1px;
+}
+
+/* line 172, ../scss/_ui-select.scss */
+body > .ui-select-bootstrap.open {
+  z-index: 1000;
+  /* Standard Bootstrap dropdown z-index */
+}
+
+/* line 176, ../scss/_ui-select.scss */
+.ui-select-multiple.ui-select-bootstrap {
+  height: auto;
+  padding: 3px 3px 0 3px;
+}
+
+/* line 181, ../scss/_ui-select.scss */
+.ui-select-multiple.ui-select-bootstrap input.ui-select-search {
+  background-color: transparent !important;
+  /* To prevent double background when disabled */
+  border: none;
+  outline: none;
+  height: 1.666666em;
+  margin-bottom: 3px;
+}
+
+/* line 189, ../scss/_ui-select.scss */
+.ui-select-multiple.ui-select-bootstrap .ui-select-match .close {
+  font-size: 1.6em;
+  line-height: 0.75;
+}
+
+/* line 194, ../scss/_ui-select.scss */
+.ui-select-multiple.ui-select-bootstrap .ui-select-match-item {
+  outline: 0;
+  margin: 0 3px 3px 0;
+}
+
+/* line 199, ../scss/_ui-select.scss */
+.ui-select-multiple .ui-select-match-item {
+  position: relative;
+}
+
+/* line 203, ../scss/_ui-select.scss */
+.ui-select-multiple .ui-select-match-item.dropping-before:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  height: 100%;
+  margin-right: 2px;
+  border-left: 1px solid #428bca;
+}
+
+/* line 213, ../scss/_ui-select.scss */
+.ui-select-multiple .ui-select-match-item.dropping-after:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  margin-left: 2px;
+  border-right: 1px solid #428bca;
+}
+
+/* line 223, ../scss/_ui-select.scss */
+.ui-select-bootstrap .ui-select-choices-row > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* line 233, ../scss/_ui-select.scss */
+.ui-select-bootstrap .ui-select-choices-row > a:hover, .ui-select-bootstrap .ui-select-choices-row > a:focus {
+  text-decoration: none;
+  color: #262626;
+  background-color: #f5f5f5;
+}
+
+/* line 239, ../scss/_ui-select.scss */
+.ui-select-bootstrap .ui-select-choices-row.active > a {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #428bca;
+}
+
+/* line 246, ../scss/_ui-select.scss */
+.ui-select-bootstrap .ui-select-choices-row.disabled > a,
+.ui-select-bootstrap .ui-select-choices-row.active.disabled > a {
+  color: #777;
+  cursor: not-allowed;
+  background-color: #fff;
+}
+
+/* fix hide/show angular animation */
+/* line 254, ../scss/_ui-select.scss */
+.ui-select-match.ng-hide-add,
+.ui-select-search.ng-hide-add {
+  display: none !important;
+}
+
+/* Mark invalid Bootstrap */
+/* line 260, ../scss/_ui-select.scss */
+.ui-select-bootstrap.ng-dirty.ng-invalid > button.btn.ui-select-match {
+  border-color: #D44950;
+}
+
+/* Handle up direction Bootstrap */
+/* line 265, ../scss/_ui-select.scss */
+.ui-select-container[theme="bootstrap"].direction-up .ui-select-dropdown {
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.25);
+}
+
 @font-face {
   font-family: 'Roboto-Italic';
   src: url("../fonts/roboto-italic/Roboto-Italic.eot");
@@ -256,8 +570,112 @@ input#errorInput {
   color: #ff0000;
 }
 
-/* Textarea */
+/* Selectors */
 /* line 159, ../scss/_global.scss */
+.container-selectors li {
+  float: left;
+  margin-left: 20px;
+}
+/* line 162, ../scss/_global.scss */
+.container-selectors li:first-child {
+  margin: 0;
+}
+/* line 166, ../scss/_global.scss */
+.container-selectors .ui-select-container {
+  width: 265px;
+}
+
+/* line 170, ../scss/_global.scss */
+.container-selectors .ui-select-container, .selectize-dropdown.single,
+.selectize-input.selectize-focus, .selectize-control.single .selectize-input, .selectize-dropdown.single {
+  border-color: #dfdfdf !important;
+}
+
+/* line 174, ../scss/_global.scss */
+.selectize-control.single .selectize-input:after {
+  border-color: #ccc transparent transparent transparent;
+}
+
+/* line 177, ../scss/_global.scss */
+.select2-container .select2-choice .select2-arrow, .selectize-control.single .selectize-input {
+  background: none;
+  box-shadow: none;
+}
+
+/* line 181, ../scss/_global.scss */
+.selectize-control.single .selectize-input {
+  padding: 5px 10px;
+}
+
+/* line 184, ../scss/_global.scss */
+.selectize-dropdown, .selectize-input, .selectize-input input {
+  font: 14px 'Roboto-Regular', sans-serif;
+  color: #333333;
+}
+/* line 187, ../scss/_global.scss */
+.selectize-dropdown::-webkit-input-placeholder, .selectize-input::-webkit-input-placeholder, .selectize-input input::-webkit-input-placeholder {
+  font: 14px 'Roboto-Italic', sans-serif;
+  color: #cccccc;
+}
+/* line 191, ../scss/_global.scss */
+.selectize-dropdown::-moz-placeholder, .selectize-input::-moz-placeholder, .selectize-input input::-moz-placeholder {
+  font: 14px 'Roboto-Italic', sans-serif;
+  color: #cccccc;
+}
+/* line 195, ../scss/_global.scss */
+.selectize-dropdown:-moz-placeholder, .selectize-input:-moz-placeholder, .selectize-input input:-moz-placeholder {
+  font: 14px 'Roboto-Italic', sans-serif;
+  color: #cccccc;
+}
+
+/* line 200, ../scss/_global.scss */
+.container-selectors .ui-select-container {
+  line-height: 10px;
+}
+
+/* line 203, ../scss/_global.scss */
+.selectize-dropdown.single {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 207, ../scss/_global.scss */
+.selectize-dropdown {
+  border-top: 1px solid #d0d0d0;
+}
+
+/* line 210, ../scss/_global.scss */
+.selectize-control.single.open .selectize-input:after {
+  border-color: #f58023 transparent transparent transparent;
+}
+
+/* line 213, ../scss/_global.scss */
+.selectize-dropdown .active, .ui-select-choices-row:hover {
+  color: #fff;
+}
+
+/* line 216, ../scss/_global.scss */
+.ui-select-choices-row:hover, .selectize-dropdown .active {
+  background-color: #f58023;
+}
+
+/* line 219, ../scss/_global.scss */
+.selectize-dropdown .optgroup {
+  border: none;
+}
+
+/* line 222, ../scss/_global.scss */
+.selectize-dropdown [data-selectable] {
+  padding-left: 15px;
+}
+
+/* line 225, ../scss/_global.scss */
+.selectize-dropdown .optgroup-header {
+  font: bold 14px 'Roboto-Regular', sans-serif;
+}
+
+/* Textarea */
+/* line 231, ../scss/_global.scss */
 .container-textarea textarea {
   width: 445px;
   height: 165px;
@@ -269,13 +687,13 @@ input#errorInput {
 }
 
 /* Counter */
-/* line 169, ../scss/_global.scss */
+/* line 241, ../scss/_global.scss */
 .counter-container, .counter-field, .counter-minus, .counter-plus {
   display: -webkit-inline-flex;
   display: inline-flex;
 }
 
-/* line 173, ../scss/_global.scss */
+/* line 245, ../scss/_global.scss */
 .counter-field, .counter-minus, .counter-plus {
   align-items: center;
   justify-content: center;
@@ -284,14 +702,14 @@ input#errorInput {
   font-family: 'Roboto-Regular', sans-serif;
 }
 
-/* line 181, ../scss/_global.scss */
+/* line 253, ../scss/_global.scss */
 .counter-container .active {
   background: #f58023;
   border-color: #f58023;
   color: #fff;
 }
 
-/* line 187, ../scss/_global.scss */
+/* line 259, ../scss/_global.scss */
 .counter-minus {
   -moz-border-radius-topleft: 2px;
   -webkit-border-top-left-radius: 2px;
@@ -301,7 +719,7 @@ input#errorInput {
   border-bottom-left-radius: 2px;
 }
 
-/* line 191, ../scss/_global.scss */
+/* line 263, ../scss/_global.scss */
 .counter-plus {
   -moz-border-radius-topright: 2px;
   -webkit-border-top-right-radius: 2px;
@@ -311,7 +729,7 @@ input#errorInput {
   border-bottom-right-radius: 2px;
 }
 
-/* line 195, ../scss/_global.scss */
+/* line 267, ../scss/_global.scss */
 .counter-minus, .counter-plus {
   background: #fff;
   color: #000;
@@ -320,14 +738,14 @@ input#errorInput {
   border: 1px solid #cccccc;
   font-size: 24px;
 }
-/* line 202, ../scss/_global.scss */
+/* line 274, ../scss/_global.scss */
 .counter-minus:focus, .counter-minus:hover, .counter-plus:focus, .counter-plus:hover {
   background: #f58023;
   border-color: #f58023;
   color: #fff;
 }
 
-/* line 208, ../scss/_global.scss */
+/* line 280, ../scss/_global.scss */
 .counter-field {
   text-align: center;
   border: none;
@@ -337,21 +755,21 @@ input#errorInput {
 }
 
 /* Checkbox */
-/* line 217, ../scss/_global.scss */
+/* line 289, ../scss/_global.scss */
 .list-checkbox {
   font: 14px 'Myriad-Pro-Regular', sans-serif;
   color: #666666;
 }
-/* line 220, ../scss/_global.scss */
+/* line 292, ../scss/_global.scss */
 .list-checkbox li {
   margin-top: 20px;
   line-height: 1em;
 }
-/* line 223, ../scss/_global.scss */
+/* line 295, ../scss/_global.scss */
 .list-checkbox li:first-child {
   margin: 0;
 }
-/* line 227, ../scss/_global.scss */
+/* line 299, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:before,
 .list-checkbox [type="checkbox"]:checked + label:before,
 .list-checkbox [type="checkbox"]:not(:checked) + label:after,
@@ -360,12 +778,12 @@ input#errorInput {
 .list-checkbox [type="checkbox"]:checked {
   position: absolute;
 }
-/* line 235, ../scss/_global.scss */
+/* line 307, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked),
 .list-checkbox [type="checkbox"]:checked {
   left: -9999px;
 }
-/* line 239, ../scss/_global.scss */
+/* line 311, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label,
 .list-checkbox [type="checkbox"]:checked + label {
   position: relative;
@@ -376,7 +794,7 @@ input#errorInput {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 249, ../scss/_global.scss */
+/* line 321, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:before,
 .list-checkbox [type="checkbox"]:checked + label:before {
   content: '';
@@ -386,7 +804,7 @@ input#errorInput {
   height: 12px;
   border: 1px solid #dfdfdf;
 }
-/* line 258, ../scss/_global.scss */
+/* line 330, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:after,
 .list-checkbox [type="checkbox"]:checked + label:after {
   content: url("../../img/checkbox-arrow.png");
@@ -399,7 +817,7 @@ input#errorInput {
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 267, ../scss/_global.scss */
+/* line 339, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
   -moz-transform: scale(0, 0);
@@ -407,7 +825,7 @@ input#errorInput {
   -webkit-transform: scale(0, 0);
   transform: scale(0, 0);
 }
-/* line 271, ../scss/_global.scss */
+/* line 343, ../scss/_global.scss */
 .list-checkbox [type="checkbox"]:checked + label:after {
   opacity: 1;
   -moz-transform: scale(1, 1);
@@ -417,45 +835,45 @@ input#errorInput {
 }
 
 /* Buttons */
-/* line 279, ../scss/_global.scss */
+/* line 351, ../scss/_global.scss */
 .container-buttons > div {
   margin-top: 35px;
 }
-/* line 281, ../scss/_global.scss */
+/* line 353, ../scss/_global.scss */
 .container-buttons > div:first-child {
   margin: 0;
 }
-/* line 285, ../scss/_global.scss */
+/* line 357, ../scss/_global.scss */
 .container-buttons li {
   display: inline-block;
 }
-/* line 287, ../scss/_global.scss */
+/* line 359, ../scss/_global.scss */
 .container-buttons li:first-child {
   margin-right: 20px;
 }
-/* line 291, ../scss/_global.scss */
+/* line 363, ../scss/_global.scss */
 .container-buttons a {
   color: #fff;
   font: 16px 'Roboto-Regular', sans-serif;
   line-height: 16px;
   text-align: center;
 }
-/* line 297, ../scss/_global.scss */
+/* line 369, ../scss/_global.scss */
 .container-buttons *:before {
   position: absolute;
 }
 
-/* line 302, ../scss/_global.scss */
+/* line 374, ../scss/_global.scss */
 .btns-rectangular-icon a, .btns-rectangular a, .btns-arrow a, .btns-search a {
   position: relative;
   display: inline-block;
 }
 
-/* line 309, ../scss/_global.scss */
+/* line 381, ../scss/_global.scss */
 .btns-rectangular-icon li:first-child a, .btns-rectangular li:first-child a {
   background: #5d7486;
 }
-/* line 313, ../scss/_global.scss */
+/* line 385, ../scss/_global.scss */
 .btns-rectangular-icon a, .btns-rectangular a {
   background: #465b6b;
   -moz-border-radius: 3px;
@@ -463,12 +881,12 @@ input#errorInput {
   border-radius: 3px;
 }
 
-/* line 319, ../scss/_global.scss */
+/* line 391, ../scss/_global.scss */
 .btns-rectangular-icon a {
   width: 230px;
   padding: 8px 20px 8px 40px;
 }
-/* line 322, ../scss/_global.scss */
+/* line 394, ../scss/_global.scss */
 .btns-rectangular-icon a:before {
   content: url("../../img/plus.png");
   top: 50%;
@@ -478,26 +896,26 @@ input#errorInput {
   margin-top: -7px;
 }
 
-/* line 333, ../scss/_global.scss */
+/* line 405, ../scss/_global.scss */
 .btns-rectangular a {
   width: 195px;
   padding: 8px 0;
 }
 
-/* line 340, ../scss/_global.scss */
+/* line 412, ../scss/_global.scss */
 .btns-arrow li:first-child span {
   background: #e85e5c;
 }
-/* line 342, ../scss/_global.scss */
+/* line 414, ../scss/_global.scss */
 .btns-arrow li:first-child span:before {
   content: url("../../img/btn-arrow-light.png");
 }
-/* line 347, ../scss/_global.scss */
+/* line 419, ../scss/_global.scss */
 .btns-arrow a {
   width: 100px;
   padding-left: 15px;
 }
-/* line 350, ../scss/_global.scss */
+/* line 422, ../scss/_global.scss */
 .btns-arrow a span {
   display: inline-block;
   padding: 8px 19px;
@@ -506,18 +924,18 @@ input#errorInput {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 355, ../scss/_global.scss */
+/* line 427, ../scss/_global.scss */
 .btns-arrow a span:before {
   content: url("../../img/btn-arrow-dark.png");
   top: 0;
   left: 3%;
 }
 
-/* line 365, ../scss/_global.scss */
+/* line 437, ../scss/_global.scss */
 .btns-search li:first-child a {
   background: #f58023;
 }
-/* line 369, ../scss/_global.scss */
+/* line 441, ../scss/_global.scss */
 .btns-search a {
   width: 88px;
   padding: 8px 0;
@@ -528,7 +946,7 @@ input#errorInput {
 }
 
 /* Side menu */
-/* line 379, ../scss/_global.scss */
+/* line 451, ../scss/_global.scss */
 .container-side-menu fieldset {
   width: 360px;
   padding: 20px;
@@ -537,47 +955,47 @@ input#errorInput {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 385, ../scss/_global.scss */
+/* line 457, ../scss/_global.scss */
 .container-side-menu legend {
   padding: 0 10px;
   font: 16px 'Roboto-Regular', sans-serif;
   color: #3f5467;
 }
-/* line 391, ../scss/_global.scss */
+/* line 463, ../scss/_global.scss */
 .container-side-menu .active a {
   text-decoration: underline;
 }
-/* line 395, ../scss/_global.scss */
+/* line 467, ../scss/_global.scss */
 .container-side-menu li {
   margin-top: 15px;
 }
-/* line 397, ../scss/_global.scss */
+/* line 469, ../scss/_global.scss */
 .container-side-menu li:first-child {
   margin: 0;
 }
-/* line 400, ../scss/_global.scss */
+/* line 472, ../scss/_global.scss */
 .container-side-menu li a {
   color: #0088cc;
 }
-/* line 402, ../scss/_global.scss */
+/* line 474, ../scss/_global.scss */
 .container-side-menu li a:hover {
   text-decoration: underline;
 }
 
 /* Status ad */
-/* line 411, ../scss/_global.scss */
+/* line 483, ../scss/_global.scss */
 .list-status li, .list-status span {
   display: inline-block;
 }
-/* line 414, ../scss/_global.scss */
+/* line 486, ../scss/_global.scss */
 .list-status li {
   margin-left: 20px;
 }
-/* line 416, ../scss/_global.scss */
+/* line 488, ../scss/_global.scss */
 .list-status li:first-child {
   margin: 0;
 }
-/* line 420, ../scss/_global.scss */
+/* line 492, ../scss/_global.scss */
 .list-status span {
   padding: 3px 10px;
   border: 1px solid #000;
@@ -586,47 +1004,47 @@ input#errorInput {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 426, ../scss/_global.scss */
+/* line 498, ../scss/_global.scss */
 .list-status .pre-moderation {
   border-color: #999999;
   color: #999999;
 }
-/* line 430, ../scss/_global.scss */
+/* line 502, ../scss/_global.scss */
 .list-status .published {
   border-color: #003366;
   color: #003366;
 }
-/* line 434, ../scss/_global.scss */
+/* line 506, ../scss/_global.scss */
 .list-status .rejected {
   border-color: #ff3333;
   color: #ff3333;
 }
-/* line 438, ../scss/_global.scss */
+/* line 510, ../scss/_global.scss */
 .list-status .application-removal {
   border-color: #039403;
   color: #039403;
 }
-/* line 442, ../scss/_global.scss */
+/* line 514, ../scss/_global.scss */
 .list-status .discontinued-publications {
   border-color: #0033ff;
   color: #0033ff;
 }
 
 /* Sidebar */
-/* line 449, ../scss/_global.scss */
+/* line 521, ../scss/_global.scss */
 .sidebar {
   width: 250px;
 }
-/* line 452, ../scss/_global.scss */
+/* line 524, ../scss/_global.scss */
 .sidebar li:last-child a {
   border-bottom: none;
 }
-/* line 456, ../scss/_global.scss */
+/* line 528, ../scss/_global.scss */
 .sidebar .active {
   background: #3f5467;
   border-bottom-color: #3f5467;
 }
-/* line 460, ../scss/_global.scss */
+/* line 532, ../scss/_global.scss */
 .sidebar a {
   display: block;
   padding: 15px 20px;
@@ -634,26 +1052,26 @@ input#errorInput {
   border-bottom: 1px solid #6d8495;
   color: #fff;
 }
-/* line 466, ../scss/_global.scss */
+/* line 538, ../scss/_global.scss */
 .sidebar a:hover, .sidebar a:focus {
   background: #3f5467;
   border-bottom-color: #3f5467;
 }
 
 /* Comment */
-/* line 473, ../scss/_global.scss */
+/* line 545, ../scss/_global.scss */
 .comment, .important {
   font: 15px 'Pt Sans', sans-serif;
   line-height: 20px;
 }
 
-/* line 477, ../scss/_global.scss */
+/* line 549, ../scss/_global.scss */
 .comment {
   width: 855px;
   color: #999999;
 }
 
-/* line 481, ../scss/_global.scss */
+/* line 553, ../scss/_global.scss */
 .important {
   width: 955px;
   padding: 15px 45px;
@@ -667,11 +1085,11 @@ input#errorInput {
 }
 
 /* Ad */
-/* line 492, ../scss/_global.scss */
+/* line 564, ../scss/_global.scss */
 .list-ad {
   overflow: hidden;
 }
-/* line 494, ../scss/_global.scss */
+/* line 566, ../scss/_global.scss */
 .list-ad > li {
   width: 270px;
   float: left;
@@ -682,16 +1100,16 @@ input#errorInput {
   margin-left: 30px;
   position: relative;
 }
-/* line 503, ../scss/_global.scss */
+/* line 575, ../scss/_global.scss */
 .list-ad > li:first-child {
   margin: 0;
 }
-/* line 507, ../scss/_global.scss */
+/* line 579, ../scss/_global.scss */
 .list-ad .apartment-address span, .list-ad h4 {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-/* line 511, ../scss/_global.scss */
+/* line 583, ../scss/_global.scss */
 .list-ad h4 {
   color: #333;
   padding: 18px 20px;
@@ -700,16 +1118,16 @@ input#errorInput {
   margin: 0;
 }
 
-/* line 519, ../scss/_global.scss */
+/* line 591, ../scss/_global.scss */
 .apartment-link, .apartment-info li {
   display: inline-block;
 }
 
-/* line 522, ../scss/_global.scss */
+/* line 594, ../scss/_global.scss */
 .img-wrap {
   position: relative;
 }
-/* line 524, ../scss/_global.scss */
+/* line 596, ../scss/_global.scss */
 .img-wrap span {
   position: absolute;
   top: 10px;
@@ -719,40 +1137,40 @@ input#errorInput {
   font: italic 14px 'Roboto-Regular', sans-serif;
   color: #fff;
 }
-/* line 533, ../scss/_global.scss */
+/* line 605, ../scss/_global.scss */
 .img-wrap img {
   width: 268px;
   height: 174px;
 }
 
-/* line 538, ../scss/_global.scss */
+/* line 610, ../scss/_global.scss */
 .apartment-info {
   padding: 15px;
 }
-/* line 540, ../scss/_global.scss */
+/* line 612, ../scss/_global.scss */
 .apartment-info ul {
   overflow: hidden;
 }
-/* line 543, ../scss/_global.scss */
+/* line 615, ../scss/_global.scss */
 .apartment-info li {
   float: left;
   padding: 0 10px;
   color: #999999;
   border-left: 1px solid #999999;
 }
-/* line 548, ../scss/_global.scss */
+/* line 620, ../scss/_global.scss */
 .apartment-info li:first-child {
   border: none;
 }
 
-/* line 553, ../scss/_global.scss */
+/* line 625, ../scss/_global.scss */
 .apartment-address {
   padding: 15px 0 15px 20px;
   background: #f5f5f5;
   border-top: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
 }
-/* line 558, ../scss/_global.scss */
+/* line 630, ../scss/_global.scss */
 .apartment-address span {
   position: relative;
   display: block;
@@ -762,7 +1180,7 @@ input#errorInput {
   font: 14px 'Roboto-Regular', sans-serif;
   color: #333333;
 }
-/* line 566, ../scss/_global.scss */
+/* line 638, ../scss/_global.scss */
 .apartment-address span:before {
   content: url("../../img/icon-address.png");
   position: absolute;
@@ -773,31 +1191,31 @@ input#errorInput {
 }
 
 /* Show/hide Content */
-/* line 578, ../scss/_global.scss */
+/* line 650, ../scss/_global.scss */
 .container-drop-content h3 {
   font: 15px 'PT Sans', sans-serif;
   color: #000000;
 }
-/* line 583, ../scss/_global.scss */
+/* line 655, ../scss/_global.scss */
 .container-drop-content .open .question:after {
   border-top: none;
   border-bottom: 5px solid #0d8ecf;
 }
-/* line 589, ../scss/_global.scss */
+/* line 661, ../scss/_global.scss */
 .container-drop-content .close span {
   overflow: hidden;
   height: 0;
 }
 
-/* line 596, ../scss/_global.scss */
+/* line 668, ../scss/_global.scss */
 .list-questions li {
   margin-top: 10px;
 }
-/* line 598, ../scss/_global.scss */
+/* line 670, ../scss/_global.scss */
 .list-questions li:first-child {
   margin: 0;
 }
-/* line 602, ../scss/_global.scss */
+/* line 674, ../scss/_global.scss */
 .list-questions .question {
   position: relative;
   display: inline-block;
@@ -807,7 +1225,7 @@ input#errorInput {
   color: #0d8ecf;
   cursor: pointer;
 }
-/* line 610, ../scss/_global.scss */
+/* line 682, ../scss/_global.scss */
 .list-questions .question:after {
   content: "";
   position: absolute;
@@ -816,18 +1234,18 @@ input#errorInput {
   border: 5px solid transparent;
   border-top: 5px solid #0d8ecf;
 }
-/* line 619, ../scss/_global.scss */
+/* line 691, ../scss/_global.scss */
 .list-questions .answer {
   display: block;
 }
 
 /* Contact info */
-/* line 626, ../scss/_global.scss */
+/* line 698, ../scss/_global.scss */
 .container-contact h3 {
   font: 19px 'PT Sans', sans-serif;
   color: #333333;
 }
-/* line 630, ../scss/_global.scss */
+/* line 702, ../scss/_global.scss */
 .container-contact .wrap-map {
   border: 1px solid #e0e0e0;
   -moz-border-radius: 3px;
@@ -835,92 +1253,92 @@ input#errorInput {
   border-radius: 3px;
 }
 
-/* line 635, ../scss/_global.scss */
+/* line 707, ../scss/_global.scss */
 .list-contacts {
   overflow: hidden;
 }
-/* line 637, ../scss/_global.scss */
+/* line 709, ../scss/_global.scss */
 .list-contacts > li {
   float: left;
   width: 480px;
   margin-left: 40px;
 }
-/* line 641, ../scss/_global.scss */
+/* line 713, ../scss/_global.scss */
 .list-contacts > li:first-child {
   margin: 0;
 }
 
-/* line 646, ../scss/_global.scss */
+/* line 718, ../scss/_global.scss */
 .contact-information {
   margin-bottom: 20px;
 }
-/* line 648, ../scss/_global.scss */
+/* line 720, ../scss/_global.scss */
 .contact-information li {
   margin-top: 5px;
   font: 15px 'Roboto-Regular', sans-serif;
   color: #010101;
 }
-/* line 652, ../scss/_global.scss */
+/* line 724, ../scss/_global.scss */
 .contact-information li:first-child {
   margin: 0;
 }
-/* line 656, ../scss/_global.scss */
+/* line 728, ../scss/_global.scss */
 .contact-information span {
   color: #999999;
 }
 
 /* Tables */
-/* line 663, ../scss/_global.scss */
+/* line 735, ../scss/_global.scss */
 .container-tables h2 + div {
   margin-bottom: 40px;
 }
 
-/* line 667, ../scss/_global.scss */
+/* line 739, ../scss/_global.scss */
 .vertical, .horizontal {
   font-family: 'PT Sans', sans-serif;
 }
-/* line 669, ../scss/_global.scss */
+/* line 741, ../scss/_global.scss */
 .vertical h3, .horizontal h3 {
   font-size: 16px;
   color: #333333;
 }
 
-/* line 674, ../scss/_global.scss */
+/* line 746, ../scss/_global.scss */
 .vertical-table, .horizontal-table {
   width: 735px;
   border: 1px solid #dfdfdf;
 }
-/* line 678, ../scss/_global.scss */
+/* line 750, ../scss/_global.scss */
 .vertical-table tr, .horizontal-table tr {
   border-bottom: 1px dashed #dfdfdf;
 }
-/* line 681, ../scss/_global.scss */
+/* line 753, ../scss/_global.scss */
 .vertical-table td, .horizontal-table td {
   border-right: 1px solid #dfdfdf;
   padding: 15px 20px;
   color: #000;
 }
 
-/* line 689, ../scss/_global.scss */
+/* line 761, ../scss/_global.scss */
 .vertical-table tr:nth-child(2n) {
   background: #f8f8f8;
 }
-/* line 692, ../scss/_global.scss */
+/* line 764, ../scss/_global.scss */
 .vertical-table td {
   width: 50%;
   font-size: 15px;
 }
-/* line 695, ../scss/_global.scss */
+/* line 767, ../scss/_global.scss */
 .vertical-table td:first-child {
   color: #999999;
 }
 
-/* line 701, ../scss/_global.scss */
+/* line 773, ../scss/_global.scss */
 .horizontal-table tr:first-child {
   background: #f8f8f8;
   border-bottom-style: solid;
 }
-/* line 704, ../scss/_global.scss */
+/* line 776, ../scss/_global.scss */
 .horizontal-table tr:first-child td {
   font-size: 15px;
   color: #999999;

@@ -154,6 +154,78 @@ input#errorInput {
   font: 12px 'Roboto-Regular', sans-serif;
   color: #ff0000;
 }
+/* Selectors */
+.container-selectors {
+  li {
+    float: left;
+    margin-left: 20px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  .ui-select-container {
+    width: 265px;
+  }
+}
+.container-selectors .ui-select-container, .selectize-dropdown.single,
+.selectize-input.selectize-focus, .selectize-control.single .selectize-input, .selectize-dropdown.single {
+  border-color: #dfdfdf !important;
+}
+.selectize-control.single .selectize-input:after {
+  border-color: #ccc transparent transparent transparent;
+}
+.select2-container .select2-choice .select2-arrow, .selectize-control.single .selectize-input {
+  background: none;
+  box-shadow: none;
+}
+.selectize-control.single .selectize-input {
+  padding: 5px 10px;
+}
+.selectize-dropdown, .selectize-input, .selectize-input input {
+  font: 14px 'Roboto-Regular', sans-serif;
+  color: #333333;
+  &::-webkit-input-placeholder {
+    font: 14px 'Roboto-Italic', sans-serif;
+    color:#cccccc;
+  }
+  &::-moz-placeholder {
+    font: 14px 'Roboto-Italic', sans-serif;
+    color:#cccccc;
+  }
+  &:-moz-placeholder {
+    font: 14px 'Roboto-Italic', sans-serif;
+    color:#cccccc;
+  }
+}
+.container-selectors .ui-select-container {
+  line-height: 10px;
+}
+.selectize-dropdown.single {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.selectize-dropdown {
+  border-top: 1px solid #d0d0d0;
+}
+.selectize-control.single.open .selectize-input:after {
+  border-color: #f58023 transparent transparent transparent;
+}
+.selectize-dropdown .active, .ui-select-choices-row:hover {
+  color: #fff;
+}
+.ui-select-choices-row:hover, .selectize-dropdown .active {
+  background-color: #f58023;
+}
+.selectize-dropdown .optgroup {
+  border: none;
+}
+.selectize-dropdown [data-selectable] {
+  padding-left: 15px;
+}
+.selectize-dropdown .optgroup-header {
+  font: bold 14px 'Roboto-Regular', sans-serif;
+}
+
 /* Textarea */
 .container-textarea {
   textarea {
