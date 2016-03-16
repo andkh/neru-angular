@@ -7,76 +7,85 @@
     <title>{{'Neru Angular'}}</title>
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css" />
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css" />
 
     <link rel="stylesheet" href="styles/css/styles.css" />
 </head>
 <body>
 <section class="container-inputs">
     <h2>Инпуты</h2>
-    <div class="address">
-        <ul>
-            <li>
-                <label for="region">Область</label>
-                <input type="text" id="region" placeholder="10px" />
-            </li>
-            <li>
-                <label for="streetName">Нормальное состояние</label>
-                <input type="text" id="streetName" placeholder="Начните печатать название улицы" />
-            </li>
-        </ul>
-    </div>
-    <div class="status">
-        <ul>
-            <li>
-                <label for="focusInput">Инпут в фокусе</label>
-                <input type="text" id="focusInput" />
-            </li>
-            <li>
-                <label for="errorInput">Ошибка валидации</label>
-                <input type="text" id="errorInput" />
-                <span class="error-message">Вы не заполнили это поле</span>
-            </li>
-        </ul>
-    </div>
+    <dl>
+        <dt>Нормальное состояние</dt>
+        <dd>
+            <label for="streetName">Область</label>
+            <input type="text" id="streetName" placeholder="Начните печатать название улицы" />
+        </dd>
+        <dt>Инпут в фокусе</dt>
+        <dd>
+            <input type="text" id="focusInput" />
+        </dd>
+        <dt>Ошибка валидации</dt>
+        <dd>
+            <input type="text" id="errorInput" />
+            <span class="error-message">Вы не заполнили это поле</span>
+        </dd>
+    </dl>
+    <!--<div class="address">-->
+                <!--<h3>Нормальное состояние</h3>-->
+                <!--<label for="streetName">Область</label>-->
+                <!--<input type="text" id="streetName" placeholder="Начните печатать название улицы" />-->
+    <!--</div>-->
+    <!--<div class="status">-->
+        <!--<ul>-->
+            <!--<li>-->
+                <!--<label for="focusInput">Инпут в фокусе</label>-->
+                <!--<input type="text" id="focusInput" />-->
+            <!--</li>-->
+            <!--<li>-->
+                <!--<label for="errorInput">Ошибка валидации</label>-->
+                <!--<input type="text" id="errorInput" />-->
+                <!--<span class="error-message">Вы не заполнили это поле</span>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
 </section>
 <section class="container-selectors">
     <h2>Селекторы</h2>
     <ul class="list-selectors" ng-controller="SelectCtrl">
         <li>
-            <ui-select ng-model="name.selected" theme="selectize" disabled="disabled" title="Choose a number">
+            <ui-select data-ng-model="name.selected" theme="selectize" disabled="disabled" title="Choose a number">
                 <ui-select-match>{{$select.selected.name}}</ui-select-match>
-                <ui-select-choices repeat="number in numbers | filter: $select.search">
-                    <span ng-bind-html="number.name | highlight: $select.search"></span>
+                <ui-select-choices data-repeat="number in numbers | filter: $select.search">
+                    <span data-ng-bind-html="number.name | highlight: $select.search"></span>
                 </ui-select-choices>
             </ui-select>
         </li>
         <li>
-            <ui-select ng-model="place.selected" theme="selectize" ng-disabled="disabled" title="Choose a room">
+            <ui-select data-ng-model="place.selected" theme="selectize" title="Choose a room">
                 <ui-select-match placeholder="Все виды">{{$select.selected.name}}</ui-select-match>
-                <ui-select-choices group-by="'place'" repeat="room in rooms | propsFilter: {name: $select.search}">
-                    <div ng-bind-html="room.name | highlight: $select.search"></div>
+                <ui-select-choices data-group-by="'place'" data-repeat="room in rooms | propsFilter: {name: $select.search}">
+                    <div data-ng-bind-html="room.name | highlight: $select.search"></div>
                 </ui-select-choices>
             </ui-select>
         </li>
         <li>
-            <ui-select ng-model="name.selected" theme="selectize" ng-disabled="disabled" title="Choose a number">
+            <ui-select data-ng-model="name.selected" theme="selectize" title="Choose a number">
                 <ui-select-match placeholder="Все виды">{{$select.selected.name}}</ui-select-match>
                 <ui-select-choices repeat="number in numbers | filter: $select.search">
-                    <span ng-bind-html="number.name | highlight: $select.search"></span>
+                    <span data-ng-bind-html="number.name | highlight: $select.search"></span>
                 </ui-select-choices>
             </ui-select>
         </li>
     </ul>
     <div class="select-choice" ng-controller="MultiChoiceCtrl">
         <selectchoice>
-            <input readonly type="text" value="" data-ng-click="openSelect()" ng-model="formedText" name="" placeholder="Выберите область или город" />
+            <input readonly type="text" value="" data-ng-click="openSelect()" data-ng-model="formedText" name="" placeholder="Выберите область или город" />
             <div class="region-choice">
                 <h2 class="title">Выберите область</h2>
                 <div class="regions">
                     <ul class="list-regions">
-                        <li ng-repeat="city in regions | orderBy:sortType:sortReverse">
-                            <a href="#" ng-bind-html="city.name" data-ng-click="showTown(city.name, city.place)"></a>
+                        <li data-ng-repeat="city in regions | orderBy:sortType:sortReverse">
+                            <a href="#" data-ng-bind-html="city.name" data-ng-click="showTown(city.name, city.place)"></a>
                         </li>
                     </ul>
                 </div>
@@ -90,9 +99,9 @@
                         </li>
                     </ul>
                     <ul class="list-regions">
-                        <li ng-repeat="town in newArr | orderBy:sortType:sortReverse">
+                        <li data-ng-repeat="town in newArr | orderBy:sortType:sortReverse">
                             <a href="#" data-ng-click="addText(cityName, town.name)">
-                                <span ng-bind-html="town.name"></span>
+                                <span data-ng-bind-html="town.name"></span>
                             </a>
                         </li>
                     </ul>
@@ -105,7 +114,7 @@
     <h2>Чекбоксы</h2>
     <form action="#">
         <ul class="list-checkbox" ng-controller="CheckboxCtrl">
-            <li ng-repeat="role in roles">
+            <li data-ng-repeat="role in roles">
                 <input type="checkbox" id="checkbox-{{role.id}}" data-checklist-model="user.roles" data-checklist-value="role" data-checklist-comparator="compareFn" />
                 <label for="checkbox-{{role.id}}">{{role.text}}</label>
             </li>
@@ -290,19 +299,19 @@
 <section class="container-sidebar">
     <h2>Боковое меню</h2>
     <ul class="sidebar" ng-controller="NavCtrl">
-        <li ng-class="menuClass('profile')">
+        <li data-ng-class="menuClass('profile')">
             <a href="#!profile" class="active">Мой профиль</a>
         </li>
-        <li ng-class="navClass('password')">
+        <li data-ng-class="navClass('password')">
             <a href="#!password">Изменение пароля</a>
         </li>
-        <li ng-class="menuClass('my-ad')">
+        <li data-ng-class="menuClass('my-ad')">
             <a href="#!ad">Мои объявления</a>
         </li>
-        <li ng-class="menuClass('groups-ad')">
+        <li data-ng-class="menuClass('groups-ad')">
             <a href="#!groups-ad">Группы объявлений</a>
         </li>
-        <li ng-class="menuClass('agent')">
+        <li data-ng-class="menuClass('agent')">
             <a href="#!agent">Мои агенты</a>
         </li>
     </ul>
