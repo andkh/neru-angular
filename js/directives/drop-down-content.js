@@ -3,6 +3,13 @@ app.directive('sliderToggle', function() {
         restrict: 'AE',
         link: function(scope, element, attrs) {
             var target = element.next()[0];
+
+            if(attrs.href === '' || attrs.href === '#'){
+                element.on('click', function(e){
+                    e.preventDefault();
+                });
+            }
+
             element.parent().addClass('close');
 
             attrs.expanded = false;

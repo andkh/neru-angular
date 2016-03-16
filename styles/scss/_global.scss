@@ -82,6 +82,12 @@ a {
     margin-right: -5px;
     font-style: italic;
     color: #9d9d9d;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  dt + dd {
+    margin-top: 0;
   }
   dd {
     width: 66%;
@@ -108,10 +114,12 @@ label[for="streetName"] {
     color: #ff0000;
   }
 }
+input#streetName, input#focusInput, input#errorInput {
+  padding: 5px;
+}
 input#streetName {
   width: 350px;
   margin-top: 8px;
-  padding: 5px;
   text-align: left;
   &:focus {
     border: 1px solid #5d7486;
@@ -247,25 +255,37 @@ input#errorInput {
     }
   }
   .list-regions {
-    overflow: hidden;
-      padding: 20px;
+    margin: 10px 0;
+    columns: 4;
+    -webkit-columns: 4;
+    -o-columns: 4;
+    -ms-columns: 4;
+    -moz-columns: 4;
+    column-gap: 0;
+    -webkit-column-gap: 0;
+    -ms-column-gap: 0;
+    -moz-column-gap: 0;
+    -o-column-gap: 0;
+    column-rule: 1px dashed #dfdfdf;
+    -moz-column-rule: 1px dashed #dfdfdf;
+    -webkit-column-rule: 1px dashed #dfdfdf;
+    -o-column-rule: 1px dashed #dfdfdf;
+    text-align: left;
     li {
-      display: inline-block;
-    }
-    li {
-      float: left;
-      min-width: 185px;
-      border-left: 1px dashed #dfdfdf;
-      text-align: left;
-      a {
-        display: block;
-        padding: 10px 20px;
+      height: 36px;
+      line-height: 36px;
+      padding: 0 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      color: #333;
+      cursor: pointer;
+      &:hover {
+        background: #f58023;
+        color: #fff;
+      }
+      span {
         font: 14px 'Roboto-Regular', sans-serif;
-        color: #333333;
-        &:hover {
-          background: #f58023;
-          color: #fff;
-        }
       }
     }
   }
@@ -282,7 +302,6 @@ input#errorInput {
     left: 50%;
     width: 840px;
     margin-left: -420px;
-    padding: 20px;
     background: #fff;
     border: 1px solid #dfdfdf;
     @include border-radius(3px);
@@ -305,8 +324,8 @@ input#errorInput {
       border-color: transparent transparent #fff transparent;
     }
     .title, .towns-nav {
-      width: 100%;
-      padding-bottom: 15px;
+      margin: 0 20px;
+      padding: 20px 0;
       border-bottom: 1px solid #ccc;
       font: italic 16px 'Roboto-Regular', sans-serif;
       color: #ccc;
@@ -317,9 +336,10 @@ input#errorInput {
     overflow: hidden;
     li {
       float: right;
+      cursor: pointer;
       &:first-child {
         float: left;
-        a {
+        span {
           padding-left: 20px;
           &:after {
             content: url('../../img/left-arrow-dark.png');
@@ -334,7 +354,7 @@ input#errorInput {
           }
         }
       }
-      a {
+      span {
         position: relative;
         font: 16px 'Roboto-Regular', sans-serif;
         color: #0088cc;
@@ -376,7 +396,11 @@ input#errorInput {
     border: 1px solid #dfdfdf;
     font: 14px 'Roboto-Italic', sans-serif;
     resize: none;
-    @include border-radius(2px)
+    @include border-radius(2px);
+    &:focus {
+      border: 1px solid #5d7486;
+      @include box-shadow(#4e96ce 0 0 4px);
+    }
   }
 }
 
@@ -391,13 +415,6 @@ input#errorInput {
   width: 40px;
   height: 32px;
   font-family: 'Roboto-Regular', sans-serif;
-}
-.counter-container {
-  .active {
-    background: #f58023;
-    border-color: #f58023;
-    color: #fff;
-  }
 }
 .counter-minus{
   @include border-top-left-radius(2px);
@@ -414,7 +431,7 @@ input#errorInput {
   text-decoration: none;
   border: 1px solid #cccccc;
   font-size: 24px;
-  &:focus, &:hover {
+  &:hover {
     background: #f58023;
     border-color: #f58023;
     color: #fff;

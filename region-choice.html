@@ -1,0 +1,26 @@
+<input readonly type="text" data-ng-click="openSelect()" data-ng-model="formedText" name="" placeholder="Выберите область или город" />
+<div class="region-choice">
+    <h2 class="title">Выберите область</h2>
+    <div class="regions">
+        <ul class="list-regions">
+            <li data-ng-repeat="city in ctrl.regions | orderBy:sortType:sortReverse" data-ng-click="showTown(city.name, city.place)">
+                <span data-ng-bind-html="city.name"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="region-towns">
+        <ul class="towns-nav">
+            <li>
+                <span data-ng-click="changeRegion()">Изменить область</span>
+            </li>
+            <li>
+                <span>Искать по всей области</span>
+            </li>
+        </ul>
+        <ul class="list-regions">
+            <li data-ng-repeat="town in newArr | orderBy:sortType:sortReverse" data-ng-click="addText(cityName, town.name)">
+                    <span data-ng-bind-html="town.name"></span>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -2,9 +2,7 @@ app.directive('counter', function() {
     return {
         restrict: 'A',
         scope: { value: '=value' },
-        template: '<a href="javascript:;" class="counter-minus" data-ng-click="minus()">-</a>\
-                  <input type="text" class="counter-field" ng-model="value" data-ng-change="changed()" data-ng-readonly="readonly">\
-                  <a  href="javascript:;" class="counter-plus active" data-ng-click="plus()">+</a>',
+        templateUrl: 'counter.html',
         link: function( scope , element , attributes ) {
             // Make sure the value attribute is not missing.
             if ( angular.isUndefined(scope.value) ) {

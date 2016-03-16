@@ -1,17 +1,20 @@
 app.directive('regionchoice', function () {
     return {
         restrict: 'AE',
+        templateUrl: 'region-choice.html',
         link: function ($scope, element) {
             $scope.openSelect = openSelect;
             $scope.showTown = showTown;
             $scope.changeRegion = changeRegion;
             $scope.addText = addText;
+            $scope.formedText = '';
             $scope.flag = false;
 
             element.parent().addClass('close');
 
             function openSelect() {
                 $scope.flag = true;
+
                 if(element.parent().hasClass('open')) {
                     element.parent().removeClass('open').addClass('close');
                     element.children()[1].classList.remove('hide');
@@ -32,7 +35,7 @@ app.directive('regionchoice', function () {
             }
 
             function addText(city, town) {
-                element.children()[0].setAttribute('value', city +', '+ town);
+                $scope.formedText = city + ", " + town;
             }
         }
     }

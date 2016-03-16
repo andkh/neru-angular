@@ -1,40 +1,46 @@
-app.controller('CounterCtrl', function( $scope ) {
-    $scope.quantity = 2;
+function MainCtrl() {
 
-});
+    var ctrl = this;
 
-app.controller('CheckboxCtrl', function($scope) {
-    $scope.roles = [
+    /* ------------ Counter ----------- */
+    ctrl.quantity = 2;
+
+
+
+    /* ------------ Checkbox ----------- */
+    ctrl.roles = [
         {id: 1, text: 'Школы, лицеи, гимназии'},
         {id: 2, text: 'Школы, лицеи, гимназии'}
     ];
-    $scope.user = {
-        roles: [$scope.roles[0]]
+    ctrl.user = {
+        roles: [ctrl.roles[0]]
     };
-    $scope.selectedUsers = $scope.user.roles;
+    ctrl.selectedUsers = ctrl.user.roles;
 
-    $scope.compareFn = function(obj1, obj2){
+    ctrl.compareFn = function(obj1, obj2){
         return obj1.id === obj2.id;
     };
-});
 
-app.controller("NavCtrl", function($scope, $location) {
-    $scope.menuClass = function(page) {
+
+
+    /* ------------ Side navigation ----------- */
+    ctrl.menuClass = function(page) {
         var current = $location.path().substring(1);
         return page === current ? "active" : "";
     };
-});
 
-app.controller('SelectCtrl', function($scope) {
-    $scope.number = {};
-    $scope.numbers = [
+
+
+    /* ------------ Select ----------- */
+    ctrl.number = {};
+    ctrl.numbers = [
         {name: 'Number1'},
         {name: 'Number2'},
         {name: 'Number3'},
         {name: 'Number4'}
     ];
 
-    $scope.peopleObj = {
+    ctrl.peopleObj = {
         '1' : { name: 'Number2', place: 'Квартиры и комнаты' },
         '2' : { name: 'Number2', place: 'Дома и дачи' },
         '3' : { name: 'Number3', place: 'Дома и дачи' },
@@ -46,29 +52,30 @@ app.controller('SelectCtrl', function($scope) {
         '9' : { name: 'Number4', place: 'Подвалы' }
     };
 
-    $scope.room = {};
-    $scope.room.selectedValue = $scope.peopleObj[3];
-    $scope.room.selectedSingle = 'Number2';
-    $scope.room.selectedSingleKey = '2';
+    ctrl.room = {};
+    ctrl.room.selectedValue = ctrl.peopleObj[3];
+    ctrl.room.selectedSingle = 'Number2';
+    ctrl.room.selectedSingleKey = '2';
 
-    $scope.rooms = [
-            { name: 'Number2', place: 'Квартиры и комнаты'},
-            { name: 'Number2', place: 'Дома и дачи' },
-            { name: 'Number3', place: 'Дома и дачи' },
-            { name: 'Number2', place: 'Подвалы' },
-            { name: 'Number3', place: 'Подвалы' },
-            { name: 'Number3', place: 'Квартиры и комнаты' },
-            { name: 'Number4', place: 'Квартиры и комнаты' },
-            { name: 'Number2', place: 'Дома и дачи' },
-            { name: 'Number4', place: 'Подвалы' }
+    ctrl.rooms = [
+        { name: 'Number2', place: 'Квартиры и комнаты'},
+        { name: 'Number2', place: 'Дома и дачи' },
+        { name: 'Number3', place: 'Дома и дачи' },
+        { name: 'Number2', place: 'Подвалы' },
+        { name: 'Number3', place: 'Подвалы' },
+        { name: 'Number3', place: 'Квартиры и комнаты' },
+        { name: 'Number4', place: 'Квартиры и комнаты' },
+        { name: 'Number2', place: 'Дома и дачи' },
+        { name: 'Number4', place: 'Подвалы' }
     ];
-});
 
-app.controller('MultiChoiceCtrl',function($scope) {
-    $scope.sortType     = 'name';
-    $scope.sortReverse  = false;
 
-    $scope.regionObj = {
+
+    /* ------------ Region Choice ----------- */
+    ctrl.sortType     = 'name';
+    ctrl.sortReverse  = false;
+
+    ctrl.regionObj = {
         '1' :{ name: 'Черкассы', place: ['Канев', 'Чигирин', 'Золотоноша']},
         '2' :{ name: 'Киев', place: ['Бровары', 'Борисполь', 'Белая Церковь'] },
         '3' :{ name: 'Львов', place: [{name: 'Канев'}, {name: 'Чигирин'}, {name:'Золотоноша'}] },
@@ -83,10 +90,10 @@ app.controller('MultiChoiceCtrl',function($scope) {
         '12' :{ name: 'Ужгород', place: [{name: 'Канев'}, {name: 'Чигирин'}, {name:'Золотоноша'}] }
     };
 
-    $scope.city = {};
-    $scope.city.selectedValue = $scope.regionObj[3];
+    ctrl.city = {};
+    ctrl.city.selectedValue = ctrl.regionObj[3];
 
-    $scope.regions = [
+    ctrl.regions = [
         { name: 'Черкассы', place: [{name: 'Канев'}, {name: 'Чигирин'}, {name:'Золотоноша'}]},
         { name: 'Киев', place: [{name: 'Бровары'}, {name: 'Борисполь'}, {name: 'Белая Церковь'}] },
         { name: 'Львов', place: [{name: 'Дрогобыч'}, {name: 'Броды'}, {name: 'Жолква'}] },
@@ -100,4 +107,4 @@ app.controller('MultiChoiceCtrl',function($scope) {
         { name: 'Хмельницкий', place: [{name: 'Бровары'}, {name: 'Борисполь'}, {name: 'Белая Церковь'}] },
         { name: 'Ужгород', place: [{name: 'Бровары'}, {name: 'Борисполь'}, {name: 'Белая Церковь'}] }
     ];
-});
+}
