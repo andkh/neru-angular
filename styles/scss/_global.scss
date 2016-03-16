@@ -156,11 +156,13 @@ input#errorInput {
 }
 /* Selectors */
 .container-selectors {
-  li {
-    float: left;
-    margin-left: 20px;
-    &:first-child {
-      margin: 0;
+  .list-selectors {
+    li {
+      float: left;
+      margin-left: 20px;
+      &:first-child {
+        margin: 0;
+      }
     }
   }
   .ui-select-container {
@@ -168,7 +170,7 @@ input#errorInput {
   }
 }
 .container-selectors .ui-select-container, .selectize-dropdown.single,
-.selectize-input.selectize-focus, .selectize-control.single .selectize-input, .selectize-dropdown.single {
+.selectize-input.selectize-focus, .selectize-control.single .selectize-input {
   border-color: #dfdfdf !important;
 }
 .selectize-control.single .selectize-input:after {
@@ -224,6 +226,155 @@ input#errorInput {
 }
 .selectize-dropdown .optgroup-header {
   font: bold 14px 'Roboto-Regular', sans-serif;
+}
+// MultiSelect
+.select-choice {
+  margin-top: 100px;
+  selectchoice {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    input {
+      width: 355px;
+      padding: 7px 10px;
+      border: 1px solid #d0d0d0;
+      font: 14px 'Roboto-Italic', sans-serif;
+      @include border-radius(3px);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      &::-webkit-input-placeholder {
+        color:#cccccc;
+      }
+      &::-moz-placeholder {
+        color:#cccccc;
+      }
+      &:-moz-placeholder {
+        color:#cccccc;
+      }
+    }
+  }
+  .list-regions {
+    overflow: hidden;
+      padding: 20px;
+    li {
+      display: inline-block;
+    }
+    li {
+      float: left;
+      min-width: 185px;
+      border-left: 1px dashed #dfdfdf;
+      text-align: left;
+      a {
+        display: block;
+        padding: 10px 20px;
+        font: 14px 'Roboto-Regular', sans-serif;
+        color: #333333;
+        &:hover {
+          background: #f58023;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.select-choice.close {
+  .region-choice {
+    display: none;
+  }
+}
+.select-choice.open {
+  .region-choice {
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    width: 840px;
+    margin-left: -420px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    @include border-radius(3px);
+    &:after, &:before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 13px 10px;
+    }
+    &:after {
+      top: -13px;
+      border-color: transparent transparent #dfdfdf transparent;
+    }
+    &:before {
+      z-index: 2;
+      top: -12px;
+      border-color: transparent transparent #fff transparent;
+    }
+    .title, .towns-nav {
+      width: 100%;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      font: italic 16px 'Roboto-Regular', sans-serif;
+      color: #ccc;
+      text-align: left;
+    }
+  }
+  .towns-nav {
+    overflow: hidden;
+    li {
+      float: right;
+      &:first-child {
+        float: left;
+        a {
+          padding-left: 20px;
+          &:after {
+            content: url('../../img/left-arrow-dark.png');
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          &:hover {
+            &:after {
+              content: url('../../img/left-arrow.png');
+            }
+          }
+        }
+      }
+      a {
+        position: relative;
+        font: 16px 'Roboto-Regular', sans-serif;
+        color: #0088cc;
+        padding-right: 20px;
+        &:hover {
+          text-decoration: underline;
+          &:after {
+            content: url('../../img/right-arrows.png');
+          }
+        }
+        &:after {
+          content: url('../../img/right-arrows-dark.png');
+          position: absolute;
+          top: -1px;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+.region-choice.hide {
+  h2, .regions {
+    display: none;
+  }
+  .region-towns {
+    display: block;
+  }
+}
+.region-towns {
+  display: none;
 }
 
 /* Textarea */

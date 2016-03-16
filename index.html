@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" data-ng-app="app">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{'Neru Angular'}}</title>
 
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css" />
@@ -42,9 +42,9 @@
 </section>
 <section class="container-selectors">
     <h2>Селекторы</h2>
-    <ul ng-controller="SelectCtrl">
+    <ul class="list-selectors" ng-controller="SelectCtrl">
         <li>
-            <ui-select ng-model="name.selected" theme="selectize" ng-disabled="disabled" title="Choose a number">
+            <ui-select ng-model="name.selected" theme="selectize" disabled="disabled" title="Choose a number">
                 <ui-select-match>{{$select.selected.name}}</ui-select-match>
                 <ui-select-choices repeat="number in numbers | filter: $select.search">
                     <span ng-bind-html="number.name | highlight: $select.search"></span>
@@ -68,6 +68,38 @@
             </ui-select>
         </li>
     </ul>
+    <div class="select-choice" ng-controller="MultiChoiceCtrl">
+        <selectchoice>
+            <input readonly type="text" value="" data-ng-click="openSelect()" ng-model="formedText" name="" placeholder="Выберите область или город" />
+            <div class="region-choice">
+                <h2 class="title">Выберите область</h2>
+                <div class="regions">
+                    <ul class="list-regions">
+                        <li ng-repeat="city in regions | orderBy:sortType:sortReverse">
+                            <a href="#" ng-bind-html="city.name" data-ng-click="showTown(city.name, city.place)"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="region-towns">
+                    <ul class="towns-nav">
+                        <li>
+                            <a href="#" data-ng-click="changeRegion()">Изменить область</a>
+                        </li>
+                        <li>
+                            <a href="#">Искать по всей области</a>
+                        </li>
+                    </ul>
+                    <ul class="list-regions">
+                        <li ng-repeat="town in newArr | orderBy:sortType:sortReverse">
+                            <a href="#" data-ng-click="addText(cityName, town.name)">
+                                <span ng-bind-html="town.name"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </selectchoice>
+    </div>
 </section>
 <section class="container-checkbox">
     <h2>Чекбоксы</h2>
@@ -413,15 +445,14 @@
     </div>
 </section>
 
-<script src="lib/angular.min.js"></script>
+<script src="js/lib/angular.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-sanitize.js"></script>
-<script src="lib/ng-map.min.js"></script>
-<script src="lib/select.min.js"></script>
+<script src="js/lib/ng-map.min.js"></script>
+<script src="js/lib/select.min.js"></script>
 <script src="http://maps.google.com/maps/api/js"></script>
-
 <script src="js/app.js"></script>
 <script src="js/controllers.js"></script>
-<script src="js/directive/directives.js"></script>
+<script src="js/directives.js"></script>
 <script src="js/filters.js"></script>
 </body>
 </html>
