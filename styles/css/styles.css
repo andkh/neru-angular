@@ -669,14 +669,14 @@ input#errorInput:focus {
   margin-top: 100px;
 }
 /* line 223, ../scss/_global.scss */
-.select-choice selectchoice {
+.select-choice regionchoice {
   position: relative;
   display: block;
   margin: 0 auto;
   text-align: center;
 }
 /* line 228, ../scss/_global.scss */
-.select-choice selectchoice input {
+.select-choice regionchoice input {
   width: 355px;
   padding: 7px 10px;
   border: 1px solid #d0d0d0;
@@ -690,15 +690,15 @@ input#errorInput:focus {
   user-select: none;
 }
 /* line 238, ../scss/_global.scss */
-.select-choice selectchoice input::-webkit-input-placeholder {
+.select-choice regionchoice input::-webkit-input-placeholder {
   color: #cccccc;
 }
 /* line 241, ../scss/_global.scss */
-.select-choice selectchoice input::-moz-placeholder {
+.select-choice regionchoice input::-moz-placeholder {
   color: #cccccc;
 }
 /* line 244, ../scss/_global.scss */
-.select-choice selectchoice input:-moz-placeholder {
+.select-choice regionchoice input:-moz-placeholder {
   color: #cccccc;
 }
 /* line 249, ../scss/_global.scss */
