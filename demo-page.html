@@ -55,7 +55,7 @@
     <form action="#">
         <ul class="list-checkbox">
             <li data-ng-repeat="role in ctrl.roles">
-                <input type="checkbox" id="checkbox-{{role.id}}" data-checklist-model="user.roles" data-checklist-value="role" />
+                <input type="checkbox" id="checkbox-{{role.id}}" data-checklist-model="user.roles" data-checklist-value="role" data-checklist-comparator="ctrl.compareFn" />
                 <label for="checkbox-{{role.id}}">{{role.text}}</label>
             </li>
         </ul>
