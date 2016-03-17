@@ -1236,11 +1236,11 @@ body {
   padding: 40px;
 }
 /* line 38, ../scss/_global.scss */
-body > section {
+body > div section {
   margin-top: 80px;
 }
-/* line 40, ../scss/_global.scss */
-body > section:first-child {
+/* line 41, ../scss/_global.scss */
+body div h1 + section {
   margin: 0;
 }
 
@@ -1887,24 +1887,24 @@ input#errorInput:focus {
   display: inline-block;
 }
 
-/* line 541, ../scss/_global.scss */
-.btns-rectangular-icon li:first-child a, .btns-rectangular li:first-child a {
-  background: #5d7486;
-}
-/* line 545, ../scss/_global.scss */
+/* line 540, ../scss/_global.scss */
 .btns-rectangular-icon a, .btns-rectangular a {
-  background: #465b6b;
+  background: #5d7486;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
+/* line 543, ../scss/_global.scss */
+.btns-rectangular-icon a:hover, .btns-rectangular a:hover {
+  background: #465b6b;
+}
 
-/* line 551, ../scss/_global.scss */
+/* line 549, ../scss/_global.scss */
 .btns-rectangular-icon a {
   width: 230px;
   padding: 8px 20px 8px 40px;
 }
-/* line 554, ../scss/_global.scss */
+/* line 552, ../scss/_global.scss */
 .btns-rectangular-icon a:before {
   content: url("../../img/plus.png");
   top: 50%;
@@ -1914,53 +1914,61 @@ input#errorInput:focus {
   margin-top: -7px;
 }
 
-/* line 565, ../scss/_global.scss */
+/* line 563, ../scss/_global.scss */
 .btns-rectangular a {
   width: 195px;
   padding: 8px 0;
 }
 
-/* line 572, ../scss/_global.scss */
-.btns-arrow li:first-child span {
+/* line 569, ../scss/_global.scss */
+.btns-arrow span {
   background: #e85e5c;
 }
-/* line 574, ../scss/_global.scss */
-.btns-arrow li:first-child span:before {
+/* line 571, ../scss/_global.scss */
+.btns-arrow span:before {
   content: url("../../img/btn-arrow-light.png");
 }
-/* line 579, ../scss/_global.scss */
+/* line 575, ../scss/_global.scss */
 .btns-arrow a {
   width: 100px;
   padding-left: 15px;
 }
-/* line 582, ../scss/_global.scss */
+/* line 578, ../scss/_global.scss */
 .btns-arrow a span {
   display: inline-block;
   padding: 8px 19px;
-  background: #be4847;
+  background: #e85e5c;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 587, ../scss/_global.scss */
+/* line 583, ../scss/_global.scss */
 .btns-arrow a span:before {
-  content: url("../../img/btn-arrow-dark.png");
+  content: url("../../img/btn-arrow-light.png");
   top: 0;
   left: 3%;
 }
-
-/* line 597, ../scss/_global.scss */
-.btns-search li:first-child a {
-  background: #f58023;
+/* line 589, ../scss/_global.scss */
+.btns-arrow a:hover span {
+  background: #be4847;
 }
-/* line 601, ../scss/_global.scss */
+/* line 591, ../scss/_global.scss */
+.btns-arrow a:hover span:before {
+  content: url("../../img/btn-arrow-dark.png");
+}
+
+/* line 598, ../scss/_global.scss */
 .btns-search a {
   width: 88px;
   padding: 8px 0;
-  background: #fd7000;
+  background: #f58023;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+}
+/* line 603, ../scss/_global.scss */
+.btns-search a:hover {
+  background: #fd7000;
 }
 
 /* Side menu */

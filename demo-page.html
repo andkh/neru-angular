@@ -1,0 +1,365 @@
+<h1>{{ app.message }}</h1>
+<section class="container-inputs">
+    <h2>Инпуты</h2>
+    <dl>
+        <dt>Нормальное состояние</dt>
+        <dd>
+            <label for="streetName">Область</label>
+            <input type="text" id="streetName" placeholder="Начните печатать название улицы" />
+        </dd>
+        <dt>Инпут в фокусе</dt>
+        <dd>
+            <input type="text" id="focusInput" />
+        </dd>
+        <dt>Ошибка валидации</dt>
+        <dd>
+            <input type="text" id="errorInput" />
+            <span class="error-message">Вы не заполнили это поле</span>
+        </dd>
+    </dl>
+</section>
+<section class="container-selectors">
+    <h2>Селекторы</h2>
+    <ul class="list-selectors">
+        <li>
+            <ui-select data-ng-model="name.selected" theme="selectize" disabled="disabled" title="Choose a number">
+                <ui-select-match>{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="number in ctrl.numbers | filter: $select.search">
+                    <span data-ng-bind-html="number.name | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </li>
+        <li>
+            <ui-select data-ng-model="place.selected" theme="selectize" title="Choose a room">
+                <ui-select-match placeholder="Все виды">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices group-by="'place'" repeat="room in ctrl.rooms | propsFilter: {name: $select.search}">
+                    <div data-ng-bind-html="room.name | highlight: $select.search"></div>
+                </ui-select-choices>
+            </ui-select>
+        </li>
+        <li>
+            <ui-select data-ng-model="name.selected" theme="selectize" title="Choose a number">
+                <ui-select-match placeholder="Все виды">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="number in ctrl.numbers | filter: $select.search">
+                    <span data-ng-bind-html="number.name | highlight: $select.search"></span>
+                </ui-select-choices>
+            </ui-select>
+        </li>
+    </ul>
+    <div class="select-choice">
+        <regionchoice></regionchoice>
+    </div>
+</section>
+<section class="container-checkbox">
+    <h2>Чекбоксы</h2>
+    <form action="#">
+        <ul class="list-checkbox">
+            <li data-ng-repeat="role in ctrl.roles">
+                <input type="checkbox" id="checkbox-{{role.id}}" data-checklist-model="user.roles" data-checklist-value="role" />
+                <label for="checkbox-{{role.id}}">{{role.text}}</label>
+            </li>
+        </ul>
+    </form>
+</section>
+<section class="container-counter">
+    <h2>Счетчик значений</h2>
+    <span counter  data-value="ctrl.quantity" data-min="0"></span>
+</section>
+<section class="container-textarea">
+    <h2>Textarea</h2>
+    <form action="#">
+        <textarea name="textarea_field" id="textareaField"></textarea>
+    </form>
+</section>
+<section class="container-buttons">
+    <h2>Кнопки</h2>
+    <div class="btns-rectangular-icon">
+        <h3>Прямоугольные с иконками</h3>
+        <a href="#">Добавить обьявление</a>
+    </div>
+    <div class="btns-rectangular">
+        <h3>Прямоугольные без иконок</h3>
+        <a href="#">Создать объявление</a>
+    </div>
+    <div class="btns-arrow">
+        <h3>Кнопки-стрелки</h3>
+        <a href="#">
+            <span>Назад</span>
+        </a>
+    </div>
+    <div class="btns-search">
+        <h3>Кнопка поиска на главной</h3>
+        <a href="#">Поиск</a>
+    </div>
+</section>
+<section class="container-side-menu">
+    <h2>Сайдменю</h2>
+    <fieldset>
+        <legend>Частным лицам</legend>
+        <ul>
+            <li>
+                <a href="#">Как разместить объявление?</a>
+            </li>
+            <li class="active">
+                <a href="#">Какие у меня гарантии безопасности?</a>
+            </li>
+            <li>
+                <a href="#">А что, если я фея?</a>
+            </li>
+            <li>
+                <a href="#">Как разместить объявление?</a>
+            </li>
+            <li>
+                <a href="#">Какие у меня гарантии безопасности?</a>
+            </li>
+        </ul>
+    </fieldset>
+</section>
+<section class="container-ad">
+    <h2>Блок обьявлений</h2>
+    <ul class="list-ad">
+        <li>
+            <a href="#" class="apartment-link">
+                <h4>Квартира</h4>
+                <div class="img-wrap">
+                    <span>250 USD / день (5000 UAH / день)</span>
+                    <img src="img/apartment.jpg" alt="Apartment" />
+                </div>
+                <div class="apartment-info">
+                    <ul>
+                        <li>
+                            <span>5 комнат</span>
+                        </li>
+                        <li>
+                            <span>666 кв. метра</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="apartment-address">
+                    <span>Черкассы, ул. Героев Сталинграда</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="apartment-link">
+                <h4>Земля коммерческого назна...</h4>
+                <div class="img-wrap">
+                    <span>25000 USD  (5000000 UAH)</span>
+                    <img src="img/apartment.jpg" alt="Apartment" />
+                </div>
+                <div class="apartment-info">
+                    <ul>
+                        <li>
+                            <span>5 комнат</span>
+                        </li>
+                        <li>
+                            <span>666 кв. метра</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="apartment-address">
+                    <span>Черкассы, ул. Героев Сталинграда</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" class="apartment-link">
+                <h4>Квартира</h4>
+                <div class="img-wrap">
+                    <span>250 USD / мес. (5000 UAH / мес.)</span>
+                    <img src="img/apartment.jpg" alt="Apartment" />
+                </div>
+                <div class="apartment-info">
+                    <ul>
+                        <li>
+                            <span>5 комнат</span>
+                        </li>
+                        <li>
+                            <span>666 кв. метра</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="apartment-address">
+                    <span>Черкассы, ул. Героев Сталинграда</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="container-status-ad">
+    <h2>Статусы объявлений</h2>
+    <ul class="list-status">
+        <li>
+            <span class="pre-moderation">На премодерации</span>
+        </li>
+        <li>
+            <span class="published">Опубликовано</span>
+        </li>
+        <li>
+            <span class="rejected">Отклонено администрацией ВПН</span>
+        </li>
+        <li>
+            <span class="application-removal">Заявка на снятие с публикации</span>
+        </li>
+        <li>
+            <span class="discontinued-publications">Снято с публикации</span>
+        </li>
+    </ul>
+</section>
+<section class="container-sidebar">
+    <h2>Боковое меню</h2>
+    <ul class="sidebar">
+        <li data-ng-class="menuClass('profile')">
+            <a href="#!profile" class="active">Мой профиль</a>
+        </li>
+        <li data-ng-class="navClass('password')">
+            <a href="#!password">Изменение пароля</a>
+        </li>
+        <li data-ng-class="menuClass('my-ad')">
+            <a href="#!ad">Мои объявления</a>
+        </li>
+        <li data-ng-class="menuClass('groups-ad')">
+            <a href="#!groups-ad">Группы объявлений</a>
+        </li>
+        <li data-ng-class="menuClass('agent')">
+            <a href="#!agent">Мои агенты</a>
+        </li>
+    </ul>
+</section>
+<section class="container-comment">
+    <h2>Комментарий</h2>
+    <p class="comment">Элемент «Комментарий» (класс comment) применяется к пояснительному тексту. И еще немного специально написанного текста,
+        чтобы получилось несколько строк для наглядности.</p>
+</section>
+<section class="container-important">
+    <h2>Важная информация</h2>
+    <p class="important">Элемент «Важно». (класс important), который используется для выделения особо важной информации. И еще немного специально
+        написанного текста,чтобы получилось несколько строк для наглядности.</p>
+</section>
+<section class="container-drop-content">
+    <h2>Раскрывающийся контент</h2>
+    <h3>Элемент «Раскрывающийся» (класс foldable) используется для формирования раскрывающихся элементов.</h3>
+    <ul class="list-questions">
+        <li>
+            <a href="#" class="question" slider-toggle>Вопрос номер один</a>
+            <span class="answer">Ответ на вопрос номер один</span>
+        </li>
+        <li>
+            <a href="#" class="question" slider-toggle>Вопрос номер два</a>
+            <span class="answer">Ответ на вопрос номер два</span>
+        </li>
+        <li>
+            <a href="#" class="question" slider-toggle>Вопрос номер три</a>
+            <span class="answer">Ответ на вопрос номер три</span>
+        </li>
+    </ul>
+</section>
+<section class="container-contact">
+    <h2>Контактная информация</h2>
+    <ul class="list-contacts">
+        <li>
+            <h3>Главный офис</h3>
+            <ul class="contact-information">
+                <li>
+                    <span>Адрес:</span> Черкасская область, г. Черкассы, ул. Валерия Лобановского, 74 (оф. 12)
+                </li>
+                <li>
+                    <span>Телефоны:</span> (096)712-31-21, (093)221-09-20, (097)399-86-09
+                </li>
+            </ul>
+            <div class="wrap-map"  map-lazy-load="https://maps.google.com/maps/api/js">
+                <ng-map center="[49.4434, 32.0164]" zoom="15">
+                    <marker position="49.4434, 32.0164" title="Hello World!"
+                            optimized="false"
+                            icon="{
+                                    url:'img/map-marker.png',
+                                    scaledSize:[30,45],
+                                    origin: [0,0],
+                                    anchor: [20,20]
+                                  }">
+
+                    </marker>
+                </ng-map>
+            </div>
+        </li>
+        <li>
+            <h3>Офис на Смелянской</h3>
+            <ul class="contact-information">
+                <li>
+                    <span>Адрес:</span> Черкасская область, г. Черкассы, ул. Валерия Лобановского, 74 (оф. 12)
+                </li>
+                <li>
+                    <span>Телефоны:</span> (096)712-31-21, (093)221-09-20, (097)399-86-09
+                </li>
+            </ul>
+            <div class="wrap-map" map-lazy-load="https://maps.google.com/maps/api/js">
+                <ng-map center="[49.4449, 32.0201]" zoom="15">
+                    <marker position="49.4449, 32.0201" optimized="false"
+                            icon="{
+                                    url:'img/map-marker.png',
+                                    scaledSize:[30,45],
+                                    origin: [0,0],
+                                    anchor: [20,20]
+                                  }">
+                    </marker>
+                </ng-map>
+            </div>
+        </li>
+    </ul>
+</section>
+<section class="container-tables">
+    <h2>Таблицы</h2>
+    <div class="vertical">
+        <h3>Table vertical</h3>
+        <table class="vertical-table">
+            <tbody><tr>
+                <td>Категория недвижимости:</td>
+                <td>Квартиры и комнаты</td>
+            </tr>
+            <tr>
+                <td>Вид недвижимости:</td>
+                <td>Квартира</td>
+            </tr>
+            <tr>
+                <td>Область:</td>
+                <td>Черкасская</td>
+            </tr>
+            <tr>
+                <td>Город:</td>
+                <td>Черкассы</td>
+            </tr>
+            <tr>
+                <td>Район:</td>
+                <td>Черкасский</td>
+            </tr>
+            <tr>
+                <td>Улица:</td>
+                <td>Смелянская</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="horizontal">
+        <h3>Table horizontal</h3>
+        <table class="horizontal-table">
+            <tbody><tr>
+                <td>Заголовок 1</td>
+                <td>Заголовок 2</td>
+                <td>Заголовок 3</td>
+            </tr>
+
+            <tr>
+                <td>Контент 1.1</td>
+                <td>Контент 2.1</td>
+                <td>Контент 3.1</td>
+            </tr>
+
+            <tr>
+                <td>Контент 1.2</td>
+                <td>Контент 2.2</td>
+                <td>Контент 3.2</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

@@ -35,11 +35,11 @@
 body {
   font: 14px 'Arial', sans-serif;
   padding: 40px;
-  > section {
+  > div section {
     margin-top: 80px;
-    &:first-child {
-      margin: 0;
-    }
+  }
+  div h1 + section {
+    margin: 0;
   }
 }
 a, input, textarea {
@@ -537,14 +537,12 @@ input#errorInput {
   }
 }
 .btns-rectangular-icon, .btns-rectangular {
-  li:first-child {
-    a {
-      background: #5d7486;
-    }
-  }
   a {
-    background: #465b6b;
+    background: #5d7486;
     @include border-radius(3px);
+    &:hover {
+      background: #465b6b;
+    }
   }
 }
 .btns-rectangular-icon {
@@ -568,12 +566,10 @@ input#errorInput {
   }
 }
 .btns-arrow {
-  li:first-child {
-    span {
-      background: #e85e5c;
-      &:before {
-        content: url('../../img/btn-arrow-light.png');
-      }
+  span {
+    background: #e85e5c;
+    &:before {
+      content: url('../../img/btn-arrow-light.png');
     }
   }
   a {
@@ -582,27 +578,31 @@ input#errorInput {
     span {
       display: inline-block;
       padding: 8px 19px;
-      background: #be4847;
+      background: #e85e5c;
       @include border-radius(3px);
       &:before {
-        content: url('../../img/btn-arrow-dark.png');
+        content: url('../../img/btn-arrow-light.png');
         top: 0;
         left: 3%;
       }
     }
+    &:hover span {
+        background: #be4847;
+        &:before {
+          content: url('../../img/btn-arrow-dark.png');
+        }
+    }
   }
 }
 .btns-search {
-  li:first-child {
-    a {
-      background: #f58023;
-    }
-  }
   a {
     width: 88px;
     padding: 8px 0;
-    background: #fd7000;
+    background: #f58023;
     @include border-radius(3px);
+    &:hover {
+      background: #fd7000;
+    }
   }
 }
 

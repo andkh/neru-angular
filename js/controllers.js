@@ -1,7 +1,7 @@
 function MainCtrl() {
 
     var ctrl = this;
-
+    ctrl.message = "The app routing is working!";
     /* ------------ Counter ----------- */
     ctrl.quantity = 2;
 
