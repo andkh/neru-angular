@@ -1,24 +1,24 @@
-<input readonly type="text" data-ng-click="openSelect()" data-ng-model="formedText" name="" placeholder="Выберите область или город" />
-<div class="region-choice">
-    <h2 class="title">Выберите область</h2>
-    <div class="regions">
+<input readonly type="text" data-ng-click="openSelect()" data-ng-model="formedText" value="" placeholder="Выберите область или город" />
+<div class="region-choice ng-hide" data-ng-show="flag">
+    <div class="regions" data-ng-show="firstStep">
+        <h2 class="title">Выберите область</h2>
         <ul class="list-regions">
-            <li data-ng-repeat="city in ctrl.regions | orderBy:sortType:sortReverse" data-ng-click="showTown(city.name, city.place)">
+            <li data-ng-repeat="city in ctrl.regions | filter: $select.search" data-ng-click="showTown(city)">
                 <span data-ng-bind-html="city.name"></span>
             </li>
         </ul>
     </div>
-    <div class="region-towns">
+    <div class="region-towns ng-hide" data-ng-show="secondStep">
         <ul class="towns-nav">
             <li>
                 <span data-ng-click="changeRegion()">Изменить область</span>
             </li>
             <li>
-                <span>Искать по всей области</span>
+                <span data-ng-click="searchAll()">Искать по всей области</span>
             </li>
         </ul>
         <ul class="list-regions">
-            <li data-ng-repeat="town in newArr | orderBy:sortType:sortReverse" data-ng-click="addText(cityName, town.name)">
+            <li data-ng-repeat="town in newArr | filter: $select.search" data-ng-click="addText(town)">
                     <span data-ng-bind-html="town.name"></span>
             </li>
         </ul>

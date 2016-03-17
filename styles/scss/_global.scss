@@ -225,6 +225,7 @@ input#errorInput {
 .selectize-dropdown .optgroup-header {
   font: bold 14px 'Roboto-Regular', sans-serif;
 }
+
 // MultiSelect
 .select-choice {
   margin-top: 100px;
@@ -290,12 +291,7 @@ input#errorInput {
     }
   }
 }
-.select-choice.close {
-  .region-choice {
-    display: none;
-  }
-}
-.select-choice.open {
+.select-choice {
   .region-choice {
     position: absolute;
     top: 48px;
@@ -374,17 +370,6 @@ input#errorInput {
       }
     }
   }
-}
-.region-choice.hide {
-  h2, .regions {
-    display: none;
-  }
-  .region-towns {
-    display: block;
-  }
-}
-.region-towns {
-  display: none;
 }
 
 /* Textarea */

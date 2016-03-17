@@ -7,35 +7,47 @@ app.directive('regionchoice', function () {
             $scope.showTown = showTown;
             $scope.changeRegion = changeRegion;
             $scope.addText = addText;
+            $scope.searchAll = searchAll;
+            $scope.copyObj = {};
             $scope.formedText = '';
             $scope.flag = false;
+            $scope.firstStep = false;
+            $scope.secondStep = false;
 
             element.parent().addClass('close');
 
             function openSelect() {
-                $scope.flag = true;
-
-                if(element.parent().hasClass('open')) {
-                    element.parent().removeClass('open').addClass('close');
-                    element.children()[1].classList.remove('hide');
+                if($scope.secondStep === true || $scope.formedText.length > 0) {
+                    $scope.flag = true;
+                    showTown($scope.copyObj);
                 } else {
-                    element.parent().removeClass('close').addClass('open');
+                    $scope.flag = true;
+                    $scope.firstStep = true;
                 }
             }
 
-            function showTown(cityName, newArr) {
-                element.children()[1].classList.add('hide');
-                $scope.newArr = newArr;
-                $scope.cityName = cityName;
+            function showTown(city) {
+                $scope.copyObj = city;
+                $scope.newArr = angular.copy(city.place);
+                $scope.cityName = angular.copy(city.name);
+                $scope.firstStep = false;
+                $scope.secondStep = true;
             }
 
             function changeRegion() {
-                element.children()[1].classList.remove('hide');
-                element.children()[0].setAttribute('value', '');
+                $scope.firstStep = true;
+                $scope.secondStep = false;
+                $scope.formedText = '';
             }
 
-            function addText(city, town) {
-                $scope.formedText = city + ", " + town;
+            function searchAll() {
+                $scope.formedText = $scope.cityName;
+                $scope.flag = false;
+            }
+
+            function addText(town) {
+                $scope.formedText = $scope.cityName + ", " + town.name;
+                $scope.flag = false;
             }
         }
     }
