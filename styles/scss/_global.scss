@@ -272,21 +272,22 @@ input#errorInput {
     -webkit-column-rule: 1px dashed #dfdfdf;
     -o-column-rule: 1px dashed #dfdfdf;
     text-align: left;
+    .active {
+      background: #f58023;
+      color: #fff;
+    }
     li {
-      height: 36px;
-      line-height: 36px;
-      padding: 0 20px;
+      line-height: 35px;
+      padding: 8px 20px;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      font: 14px 'Roboto-Regular', sans-serif;
       color: #333;
       cursor: pointer;
       &:hover {
         background: #f58023;
         color: #fff;
-      }
-      span {
-        font: 14px 'Roboto-Regular', sans-serif;
       }
     }
   }

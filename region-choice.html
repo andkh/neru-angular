@@ -18,9 +18,7 @@
             </li>
         </ul>
         <ul class="list-regions">
-            <li data-ng-repeat="town in newArr | filter: $select.search" data-ng-click="addText(town)">
-                    <span data-ng-bind-html="town.name"></span>
-            </li>
+            <li data-ng-repeat="town in newArr | filter: $select.search" data-ng-click="addText(town)" data-ng-bind-html="town.name"></li>
         </ul>
     </div>
 </div>

@@ -2,7 +2,7 @@ app.directive('regionchoice', function () {
     return {
         restrict: 'AE',
         templateUrl: 'region-choice.html',
-        link: function ($scope, element) {
+        link: function ($scope) {
             $scope.openSelect = openSelect;
             $scope.showTown = showTown;
             $scope.changeRegion = changeRegion;
@@ -13,23 +13,25 @@ app.directive('regionchoice', function () {
             $scope.flag = false;
             $scope.firstStep = false;
             $scope.secondStep = false;
-
-            element.parent().addClass('close');
+            $scope.hideSelect = false;
 
             function openSelect() {
-                if($scope.secondStep === true || $scope.formedText.length > 0) {
-                    $scope.flag = true;
-                    showTown($scope.copyObj);
+                if($scope.flag === true) {
+                    $scope.flag = false;
                 } else {
-                    $scope.flag = true;
-                    $scope.firstStep = true;
+                    if($scope.secondStep === true || $scope.formedText.length > 0) {
+                        $scope.flag = true;
+                    } else {
+                        $scope.flag = true;
+                        $scope.firstStep = true;
+                    }
                 }
             }
 
             function showTown(city) {
                 $scope.copyObj = city;
                 $scope.newArr = angular.copy(city.place);
-                $scope.cityName = angular.copy(city.name);
+                $scope.regionName = angular.copy(city.name);
                 $scope.firstStep = false;
                 $scope.secondStep = true;
             }
@@ -41,12 +43,12 @@ app.directive('regionchoice', function () {
             }
 
             function searchAll() {
-                $scope.formedText = $scope.cityName;
+                $scope.formedText = $scope.regionName;
                 $scope.flag = false;
             }
 
             function addText(town) {
-                $scope.formedText = $scope.cityName + ", " + town.name;
+                $scope.formedText = $scope.regionName + ", " + town.name;
                 $scope.flag = false;
             }
         }
